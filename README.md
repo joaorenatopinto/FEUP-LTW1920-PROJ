@@ -1,4 +1,4 @@
-# FEUP-LTW-19-20
+# FEUP-LTW-1920-PROJ
 
 # S
 # a
