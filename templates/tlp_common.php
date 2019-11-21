@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <link href="css/navbar.css" rel="stylesheet">
         <link href="css/common.css" rel="stylesheet">
+        <link href="css/property-card.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -27,7 +28,7 @@
                 <li><a href="#">Profile</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#"><button>List Property</button>
+        <a class="cta" href="#"><button>List Property</button></a>
     </header>
 <?php } ?>
 

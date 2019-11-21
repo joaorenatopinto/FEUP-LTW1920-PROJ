@@ -1,0 +1,62 @@
+.property-card-container {
+    margin-top: 25px;
+    width: 100%;
+    height: 260px;
+    background-color: white;
+    border-radius: 7px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.property-card {
+    display: flex;
+}
+
+.property-img {
+    height: 260px;
+    margin-right: 20px;
+}
+
+.property-img img {
+    height: inherit;
+    border-radius: 7px 0px 0px 7px;
+}
+
+.property-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.property-features {
+    display: flex;
+}
+
+.property-pricing {
+    color: #2E8CAE;
+}
+
+.property-region {
+    text-transform: uppercase;
+    color: #708090;
+    margin: 0px;
+    font-size: 1em;
+}
+
+.property-title {
+    margin: 0px;
+    font-size: 1.3em;
+}
+
+.proporty-title-link {
+    text-decoration: none;
+}
+
+.property-pricing {
+    margin: 0px;
+    font-size: 1em;
+}
+
+
+
+
+    
