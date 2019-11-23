@@ -6,6 +6,7 @@
     border-radius: 4px;
     grid-column-start: 2;
     grid-column-end: 3;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .property-card {

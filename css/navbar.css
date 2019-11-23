@@ -44,9 +44,26 @@
 }
 
 .nav_links li a {
+    display: inline-block;
     transition: all 0.3s ease 0s;
     color: #acbbc0;
     text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.nav_links li a::after {
+    content: '';    
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #a4c739;
+    transition: width .3s;
+}
+
+.nav_links li a:hover::after {
+    width: 100%;
 }
 
 .nav_links li a:hover {
@@ -61,6 +78,9 @@ button {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.3em;
+    font-weight: 300;
 }
 
 button:hover {
