@@ -70,7 +70,7 @@
     color: #a4c739;
 }
 
-button {
+.navbar button {
     padding: 9px 25px;
     margin-left: 20px;
     background-color: #acbbc0;
@@ -83,7 +83,7 @@ button {
     font-weight: 300;
 }
 
-button:hover {
+.navbar button:hover {
     background-color: #a4c739;
 }
 

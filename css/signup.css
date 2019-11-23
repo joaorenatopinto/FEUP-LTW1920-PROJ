@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-card header h3 {
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+.signup-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form {
+    flex-direction: column;
+    justify-content: space-around;
+    display: flex;
+    background-color: white;
+    padding: 30px 30px 50px 30px;
+    border-radius: 5px;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.signup-form input {
+    border: 0px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #708090;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.signup-form input::placeholder {
+    font-size: 20px;
+    color: #708090;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#sp-submit {
+    padding: 10px 0px 10px 0px;
+    border-bottom: 0px;
+    color: white;
+    border-top: 30px;
+    background-color: #a4c739;
+    width: 302px;
+    border-radius: 0px 0px 5px 5px;
+    position:absolute;
+    transform: translateY(177px) translateX(-30px);
+}
+

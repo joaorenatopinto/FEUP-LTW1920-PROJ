@@ -7,6 +7,7 @@
     grid-column-start: 2;
     grid-column-end: 3;
     font-family: 'Source Sans Pro', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .property-card {

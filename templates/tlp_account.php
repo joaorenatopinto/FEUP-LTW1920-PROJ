@@ -1,0 +1,30 @@
+<?php function draw_signup()
+{ ?>
+    <div class="signup-card">
+        <header>
+            <h3> Sign Up</h3>
+        </header>
+        <form class="signup-form" method=post" action="#">
+            <input id="sp-firstname" type="text" name="firstname" placeholder="First Name" required="">
+            <input id="sp-lastname" type="text" name="lastname" placeholder="Last Name" required="">
+            <input id="sp-username" type="text" name="username" placeholder="Username" required="">
+            <input id="sp-password" type="password" name="password" placeholder="Password" required="">
+            <input id="sp-confirmpassword" type="password" name="confirm-password" placeholder="Confirm Your Password" required="">
+            <input id="sp-submit" type="submit" value="Sign Up">
+        </form>
+    </div>
+<?php } ?>
+
+<?php function draw_signup_header() { ?>
+    <!DOCTYPE html>
+    <html lang="en-US">
+    <head>
+        <title>Houst.</title>
+        <meta charset="UTF-8">
+        <link href="css/common.css" rel="stylesheet">
+        <link href="css/signup.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+<?php } ?>
