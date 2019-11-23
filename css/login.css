@@ -5,33 +5,35 @@ body {
     align-items: center;
 }
 
-.signup-card {
+.login-card {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.signup-card header h3 {
+.login-card header h3 {
     text-align: center;
-    font-size: 50px;
+    font-size: 45px;
     margin-bottom: 15px;
 }
-.signup-card {
+
+.login-card {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.signup-form {
+
+.login-form {
     flex-direction: column;
     justify-content: space-around;
     display: flex;
     background-color: white;
     padding: 30px 30px 50px 30px;
     border-radius: 5px;
-    height: 300px;
+    height: 150px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.signup-form input {
+.login-form input {
     border: 0px;
     padding-bottom: 5px;
     border-bottom: 1px solid #708090;
@@ -39,13 +41,13 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.signup-form input::placeholder {
+.login-form input::placeholder {
     font-size: 20px;
     color: #708090;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-#sp-submit {
+#li-submit {
     padding: 10px 0px 10px 0px;
     border-bottom: 0px;
     color: white;
@@ -54,6 +56,5 @@ body {
     width: 302px;
     border-radius: 0px 0px 5px 5px;
     position:absolute;
-    transform: translateY(178px) translateX(-30px);
+    transform: translateY(102px) translateX(-30px);
 }
-
