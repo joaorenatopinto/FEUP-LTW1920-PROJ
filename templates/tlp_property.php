@@ -4,7 +4,7 @@
     <div class="property-card-container">
         <article class="property-card">
             <div class="property-img">
-                <img alt="none for now" src="images/house-example.jpg">
+                <img alt="none for now" src="images/house-example2.jpg">
             </div>
             <div class="property-details">
                     <h6 class="property-region"> Areosa, Porto, Portugal </h6>

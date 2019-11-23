@@ -15,11 +15,14 @@
 
 .property-img {
     height: 260px;
+    width: 390px;
     margin-right: 20px;
 }
 
 .property-img img {
+    object-fit: cover;
     height: inherit;
+    width: inherit;
     border-radius: 4px 0px 0px 4px;
 }
 
