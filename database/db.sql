@@ -1,8 +1,10 @@
 CREATE TABLE users (
     username VARCHAR PRIMARY KEY,
     password VARCHAR,
-    firstname VARCHAR,
-    lastname VARCHAR
+    fullname VARCHAR,
+    country VARCHAR,
+    email VARCHAR,
+    bio VARCHAR
 );
 
 CREATE TABLE property (

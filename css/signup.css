@@ -45,6 +45,14 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+.signup-form #sp-password {
+    font-size: 10px;
+}
+
+.signup-form #sp-confirmpassword {
+    font-size: 10px;
+}
+
 #sp-submit {
     padding: 10px 0px 10px 0px;
     border-bottom: 0px;
