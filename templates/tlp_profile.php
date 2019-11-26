@@ -18,3 +18,11 @@
         </div>
     </div>
 <?php } ?>
+
+<?php function draw_profile_ui()
+{ ?>
+    <div class="profile-properties-reservations">
+        <input class="profile-show-properties" type="button" value="Properties">
+        <input class="profile-show-reservations" type="button" value="Reservations">
+    </div>
+<?php } ?>

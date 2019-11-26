@@ -30,7 +30,7 @@
                 <li><a href="#">Profile</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#"><button>List Property</button></a>
+        <a href="#"><button>List Property</button></a>
     </header>
 <?php } ?>
 

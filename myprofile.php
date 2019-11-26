@@ -4,5 +4,5 @@
     draw_header();
     draw_navbar();
     draw_profile_card();
-
+    draw_profile_ui();
 ?>
