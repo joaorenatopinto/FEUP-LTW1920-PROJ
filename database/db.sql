@@ -4,7 +4,8 @@ CREATE TABLE users (
     fullname VARCHAR,
     country VARCHAR,
     email VARCHAR,
-    bio VARCHAR
+    bio VARCHAR,
+    joindate DATE
 );
 
 CREATE TABLE property (

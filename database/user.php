@@ -2,8 +2,7 @@
   function getAllUsers() {
     global $db;
     $stmt = $db->prepare("SELECT *
-                           FROM property
-                           ORDER BY id DESC");
+                           FROM users");
     $stmt->execute();
     return $stmt->fetchAll();
   }
