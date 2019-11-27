@@ -10,5 +10,7 @@
 
     draw_profile_card($users[0]);
 
-    draw_profile_ui();
+    $properties = get_user_properties($users[0]);
+
+    draw_profile_ui($properties);
 ?>

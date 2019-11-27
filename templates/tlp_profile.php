@@ -1,3 +1,5 @@
+<?php include_once('tlp_property.php'); ?>
+
 <?php function draw_profile_card($user)
 { ?>
     <div class="profile-card-container">
@@ -19,10 +21,14 @@
     </div>
 <?php } ?>
 
-<?php function draw_profile_ui()
+<?php function draw_profile_ui($properties)
 { ?>
     <div class="profile-properties-reservations">
         <input class="profile-show-properties" type="button" value="Properties">
-        <input class="profile-show-reservations" type="button" value="Reservations">
     </div>
+    <?php
+        foreach($properties as $property) {
+            draw_property($property);
+        }
+    ?>
 <?php } ?>
