@@ -1,13 +1,13 @@
 <!-- eventualmente fazer aceitar argumento $advert com info sobre casa e whatnot -->
 <?php function draw_property()
-{  ?>
+{  ?> foreach ($properties as $property) { ?>
     <div class="property-card-container">
         <article class="property-card">
             <div class="property-img">
                 <img alt="none for now" src="images/house-example2.jpg">
             </div>
             <div class="property-details">
-                    <h6 class="property-region"> Areosa, Porto, Portugal </h6>
+                    <h6 class="property-region"> <?=$property['location']?> </h6>
                     <h4 class="property-title"> <a href="#">  Casa Areosa Para Estudantes </a> </h4> 
                     <h6 class="property-pricing"> <strong> 150 € / day </strong> </h6>
                 <p class="property-description">
@@ -34,5 +34,5 @@
             </div>
         </article>
     </div>
-
+    <?php }
 <?php } ?>
