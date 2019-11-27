@@ -12,9 +12,6 @@
     $properties = getAllProperties();
 
     draw_all_properties($properties);
-    /*draw_property();
-    draw_property();
-    draw_property();*/
 ?>
 
 
