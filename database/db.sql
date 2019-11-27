@@ -9,7 +9,9 @@ CREATE TABLE users (
 
 CREATE TABLE property (
     id INTEGER PRIMARY KEY,
+    title VARCHAR,
     owner VARCHAR REFERENCES users,
+    description VARCHAR,
     country VARCHAR,
     location VARCHAR,
     adress VARCHAR,
@@ -19,6 +21,7 @@ CREATE TABLE property (
     nlivingrooms INTEGER,
     type INTEGER, -- 0: flat/apartment ; 1: house
     pricePerDay INTEGER,
+    area INTEGER,
     postdate DATETIME
 );
 
@@ -49,7 +52,9 @@ INSERT INTO users VALUES(
 
 INSERT INTO property VALUES(
     1,
+    'Casa férias do estrondo varanda do estrondo',
     'sonic',
+    'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
     'Portugal',
     'Porto',
     'Areosa City',
@@ -58,13 +63,16 @@ INSERT INTO property VALUES(
     1,
     1,
     1,
-    300,
+    201,
+    249,
     '2007-05-08 12:35:29'
 );
 
 INSERT INTO property VALUES(
     2,
+    'Casa férias do estrondo varanda do estrondo',
     'sonic',
+    'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
     'Portugal',
     'Porto',
     'Penafiel',
@@ -73,21 +81,25 @@ INSERT INTO property VALUES(
     2,
     1,
     1,
-    250,
+    202,
+    194,
     '2017-11-08 09:35:29'
 );
 
 INSERT INTO property VALUES(
     3,
+    'Casa férias do estrondo varanda do estrondo',
     'sonic',
+    'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
     'Portugal',
     'Porto',
     'Porto',
     1,
-    2,
+    2, 
     1,
     1,
     1,
-    150,
+    203,
+    200,
     '2015-05-07 12:50:29'
 );

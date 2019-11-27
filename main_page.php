@@ -1,4 +1,6 @@
 <?php 
+    include_once('database/connection.php');
+    include_once('database/property.php');
     include_once('templates/tlp_common.php');
     include_once('templates/tlp_property.php');
 
@@ -6,7 +8,10 @@
     draw_navbar();
     draw_footer();
 
-    draw_property();
+    
+    $properties = getAllProperties();
+
+    draw_all_properties($properties);
     /*draw_property();
     draw_property();
     draw_property();*/
