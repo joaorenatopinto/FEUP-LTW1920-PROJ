@@ -10,8 +10,13 @@
     return $stmt->fetchAll();
   }
 
-  function search_properties($location, $price) {
+  function search_properties($location, $price, $bedrooms) {
     global $db;
+
+    $query = "SELECT *
+              FROM property
+              WHERE property.location LIKE ? AND
+                    property.price BETWEEN ? AND ?";
 
     switch($price) {
       case 0:
@@ -44,10 +49,29 @@
       $location = '%';
     }
 
-    $stmt = $db->prepare("SELECT *
-                          FROM property
-                          WHERE property.location LIKE ? AND
-                                property.price BETWEEN ? AND ?;");
+    switch($bedrooms) {
+      case 0:
+        $query .= " AND property.nbedrooms >= 0;";
+        break;
+      case 1:
+        $query .= " AND property.nbedrooms = 1;";
+        break;
+      case 2:
+        $query .= " AND property.nbedrooms = 2;";
+        break;
+      case 3:
+        $query .= " AND property.nbedrooms = 3;";
+        break;
+      case 4:
+        $query .= " AND property.nbedrooms = 4;";
+        break;
+      case 5:
+        $query .= " AND property.nbedrooms >= 5;";
+        break;
+    }
+
+    print($query);
+    $stmt = $db->prepare($query);
     $stmt->execute(array($location, $min, $max));
     return $stmt->fetchAll();
   }

@@ -124,3 +124,21 @@ INSERT INTO property VALUES(
     200,
     '2015-05-07 12:50:29'
 );
+
+INSERT INTO property VALUES(
+    5,
+    'Mansão do Papá Cris',
+    'sonic',
+    'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
+    'Itália',
+    'Turim',
+    'Rua Messi 6969',
+    10,
+    10, 
+    10,
+    10,
+    1,
+    1000,
+    1000,
+    '2015-05-07 12:50:29'
+);
