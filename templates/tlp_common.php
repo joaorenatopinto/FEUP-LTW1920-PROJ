@@ -5,6 +5,7 @@
         <title>Houst.</title>
         <meta charset="UTF-8">
         <link href="css/navbar.css" rel="stylesheet">
+        <link href="css/footer.css" rel="stylesheet">
         <link href="css/common.css" rel="stylesheet">
         <link href="css/profile.css" rel="stylesheet">
         <link href="css/property-card.css" rel="stylesheet">
@@ -35,6 +36,10 @@
 <?php } ?>
 
 <?php function draw_footer() { ?>
-    </body>
+    <div class = footer>
+        <div class="logo_container">
+            <img class="logo" src="images/logo/logo.png" alt="logo">
+        </div>
+    </div>
     </html>
 <?php } ?>
