@@ -1,6 +1,6 @@
 <?php 
     include_once('database/connection.php');
-    include_once('database/user.php');
+    include_once('database/db_users.php');
     include_once('templates/tlp_common.php');
     include_once('templates/tlp_profile.php');
     draw_header();

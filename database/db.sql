@@ -21,7 +21,7 @@ CREATE TABLE property (
     nkitchens INTEGER,
     nlivingrooms INTEGER,
     type INTEGER, -- 0: flat/apartment ; 1: house
-    pricePerDay INTEGER,
+    price INTEGER,
     area INTEGER,
     postdate DATETIME
 );
@@ -48,7 +48,8 @@ INSERT INTO users VALUES(
     'Jacinto Leite Aquino Rego',
     'Portugal',
     'sonic@hotmail.com',
-    '¯\_(ツ)_/¯'
+    '¯\_(ツ)_/¯',
+    '2019-20-11'
 );
 
 INSERT INTO property VALUES(
@@ -57,14 +58,14 @@ INSERT INTO property VALUES(
     'sonic',
     'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
     'Portugal',
-    'Porto',
-    'Areosa City',
+    'Vila Real',
+    'Rua dos Mortos 123',
     2,
     4,
     1,
     1,
     1,
-    201,
+    800,
     249,
     '2007-05-08 12:35:29'
 );
@@ -75,14 +76,14 @@ INSERT INTO property VALUES(
     'sonic',
     'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
     'Portugal',
-    'Porto',
-    'Penafiel',
+    'Aveiro',
+    'Rua Venesa 123',
     2,
     3,
     2,
     1,
     1,
-    202,
+    250,
     194,
     '2017-11-08 09:35:29'
 );
@@ -93,14 +94,33 @@ INSERT INTO property VALUES(
     'sonic',
     'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
     'Portugal',
-    'Porto',
-    'Porto',
+    'Penafiel',
+    'Sameiro nº42',
     1,
     2, 
     1,
     1,
     1,
-    203,
+    120,
+    200,
+    '2015-05-07 12:50:29'
+);
+
+
+INSERT INTO property VALUES(
+    4,
+    'MANSÃO YURI ARAUJO CRAQUE PENAFIEL INCLUI ROUPA INTERIOR',
+    'sonic',
+    'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
+    'Portugal',
+    'Penafiel',
+    'Sameiro nº42',
+    1,
+    2, 
+    1,
+    1,
+    1,
+    80,
     200,
     '2015-05-07 12:50:29'
 );
