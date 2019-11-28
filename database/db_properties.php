@@ -40,6 +40,10 @@
         break;
     }
 
+    if($location=='') {
+      $location = '%';
+    }
+
     $stmt = $db->prepare("SELECT *
                           FROM property
                           WHERE property.location LIKE ? AND
