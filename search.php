@@ -15,5 +15,5 @@
         draw_property($result);
     }
 
-    draw_footer();
+    //draw_footer();
 ?>

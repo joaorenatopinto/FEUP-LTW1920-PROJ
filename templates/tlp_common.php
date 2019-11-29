@@ -28,7 +28,7 @@
                 <li><a href="#">Messages</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contacts</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="login.php">Profile</a></li>
             </ul>
         </nav>
         <a href="#"><button>List Property</button></a>
