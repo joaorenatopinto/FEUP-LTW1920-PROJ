@@ -19,7 +19,7 @@
 <?php function draw_navbar(){ ?>
     <header class="navbar">
         <div class="logo_container">
-            <img class="logo" src="images/logo/logo.png" alt="logo">
+            <a href="main_page.php"> <img class="logo" src="images/logo/logo.png" alt="logo"> </a>
         </div>
 
         <nav>

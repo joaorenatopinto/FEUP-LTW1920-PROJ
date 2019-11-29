@@ -5,7 +5,7 @@
     global $db;
     $stmt = $db->prepare("SELECT *
                            FROM property
-                           ORDER BY id DESC");
+                           ORDER BY id DESC;");
     $stmt->execute();
     return $stmt->fetchAll();
   }
@@ -70,8 +70,19 @@
         break;
     }
 
-    print($query);
+    //print($query);
     $stmt = $db->prepare($query);
     $stmt->execute(array($location, $min, $max));
     return $stmt->fetchAll();
   }
+
+  function get_property_by_id($id) {
+    global $db;
+    $stmt = $db->prepare("SELECT *
+                          FROM property
+                          WHERE property.id = ?;");
+    $stmt->execute(array($id));
+    return $stmt->fetchAll();
+  }
+
+?>
