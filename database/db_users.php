@@ -22,10 +22,10 @@
     global $db;
     $stmt = $db->prepare("SELECT users.*
                           FROM users
-                          WHERE users.username = ? AND
-                                users.password = ?");
-    $stmt->execute(array($username, $password));
-    return $stmt->fetchAll();
+                          WHERE users.username = ?");
+    $stmt->execute(array($username));
+    $user = $stmt->fetch();
+    return ($user !== false && password_verify($password, $user['password']));
   }
 
   function get_user_properties($user) {
@@ -39,8 +39,12 @@
 
   function insert_user($username, $password, $name) {
     global $db;
+
+    $options = ['cost' => 12];
+    $hash_pass = password_hash($password, PASSWORD_DEFAULT, $options);
+
     $stmt = $db->prepare("INSERT INTO users VALUES(?, ?, ?, ?, ?, ?, ?)");
-    $stmt->execute(array($username, $password, $name, null, null, null, date('Y-m-d')));
+    $stmt->execute(array($username, $hash_pass, $name, null, null, null, date('Y-m-d')));
   }
 
 ?>
