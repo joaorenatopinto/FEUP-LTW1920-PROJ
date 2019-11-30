@@ -50,7 +50,7 @@
         <header>
             <h3>Welcome back!</h3>
         </header>
-        <form class="login-form" method="post" action="#">
+        <form class="login-form" method="post" action="action_login.php">
             <input id="li-username" type="text" name="username" placeholder="Username" required="">
             <input id="li-password" type="password" name="password" placeholder="Password" required="">
             <input id="li-submit" type="submit" value="Sign Up">

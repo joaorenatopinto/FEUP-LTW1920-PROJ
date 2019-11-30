@@ -3,14 +3,17 @@
     include_once('database/db_users.php');
     include_once('templates/tlp_common.php');
     include_once('templates/tlp_profile.php');
-    draw_header();
-    draw_navbar();
+    session_start();
 
-    $users = getAllUsers();
-
-    draw_profile_card($users[0]);
-
-    $properties = get_user_properties($users[0]);
-
-    draw_profile_ui($properties);
+    if(isset($_SESSION['username'])) {
+        draw_header();
+        draw_navbar();
+        $user = get_user($_SESSION['username']);
+        draw_profile_card($user);
+        $properties = get_user_properties($user);
+        draw_profile_ui($properties);
+    }
+    else {
+        header('Location: login.php');
+    }
 ?>

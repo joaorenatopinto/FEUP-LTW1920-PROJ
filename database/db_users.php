@@ -9,6 +9,24 @@
     return $stmt->fetchAll();
   }
 
+  function get_user($username) {
+    global $db;
+    $stmt = $db->prepare("SELECT users.*
+                          FROM users
+                          WHERE users.username = ?");
+    $stmt->execute(array($username));
+    return $stmt->fetchAll()[0];
+  }
+
+  function check_password($username, $password) {
+    global $db;
+    $stmt = $db->prepare("SELECT users.*
+                          FROM users
+                          WHERE users.username = ? AND
+                                users.password = ?");
+    $stmt->execute(array($username, $password));
+    return $stmt->fetchAll();
+  }
 
   function get_user_properties($user) {
     global $db;

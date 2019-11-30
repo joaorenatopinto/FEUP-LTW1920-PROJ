@@ -1,5 +1,6 @@
 <?php
     include_once('database/db_users.php');
+    session_start();
 
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -7,8 +8,9 @@
 
     try {
         insert_user($username, $password, $name);
-        //$_SESSION['username'] = $username;
-        header('Location: main_page.php');
+        $_SESSION['username'] = $username;
+        print($_SESSION['username']);
+        header('Location: profile.php');
     } catch(PDOException $e) {
         header('Location: signup.php');
     }
