@@ -13,7 +13,7 @@
     $properties = getAllProperties();
     draw_all_properties($properties);
     
-    //draw_footer();
+    draw_footer();
 ?>
 
 

@@ -9,7 +9,7 @@
     align-items: center;
     padding: 0.8rem 0.8rem;
 
-    background-color: #0B3B49;
+    background-color: var(--main-bg-color);
 }
 
 .logo_container {

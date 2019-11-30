@@ -1,7 +1,9 @@
 body {
+    --main-bg-color :#0B3B49;
+    position: relative;
     margin: 0;
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: 1fr auto;
     background-color: #D3D3D3;
-}
+}   
