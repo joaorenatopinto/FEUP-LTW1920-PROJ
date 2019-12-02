@@ -14,4 +14,8 @@
     if(isset($password) and $password==$confirm_pw) {
         update_user_password($username, $password);
     }
+
+    header("Location: main_page.php");
+
+    
 ?>
