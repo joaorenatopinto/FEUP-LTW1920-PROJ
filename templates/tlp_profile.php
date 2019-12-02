@@ -6,8 +6,12 @@
         <a href="editprofile.php?username=<?= $user['username'] ?>"> <button class="edit-profile">Edit Profile</button></a>
         <a href="action_logout.php"><button class="edit-profile">Logout</button></a>
         <div class="profile-card">
-            <div class="profile-img">
-                <img alt="none" src="images/profile.jpg">
+            <div class="profile-img"> 
+                <?php
+                    echo '<img alt="none" src="images/users/';
+                    if(file_exists("images/users/" . $user['username'] . ".png")) echo $user['username'] . '.png">';
+                    else echo 'default.jpg">';
+                ?>
             </div>
             <div class="profile-details">
                 <h4 class="profile-name"> <?= $user['fullname'] ?></h4>

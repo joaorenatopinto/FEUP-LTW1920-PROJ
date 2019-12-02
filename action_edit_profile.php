@@ -17,10 +17,8 @@
 
     //if(isset($_FILES['image']['tmp_file'])) process_image($username, "images/users");
     if(isset($_FILES['image']['tmp_name'])) {
-        print('AWDNAWOIDNAWDNWA');
         imagepng(imagecreatefromstring(file_get_contents($_FILES['image']['tmp_name'])), "images/users/$username.png");
-        print('AWDNAWOIDNAWDNWA2');
     }
 
-    //header("Location: main_page.php");    
+    header("Location: main_page.php");    
 ?>
