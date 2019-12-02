@@ -74,29 +74,31 @@
     <body>
 <?php } ?>
 
-<?php function draw_edit() { ?>
+<?php function draw_edit($user) { ?>
     <div class="edit-card">
         <header>
             <h3>Edit Your Profile</h3>
         </header>
-        <form class="edit-form" method="post" action="action_edit.php">
-            <input id="edit-firstname" type="text" name="firstname" placeholder="First Name">
-            <input id="edit-lastname" type="text" name="lastname" placeholder="Last Name">
-            <input id="edit-email" type="text" name="email" placeholder="Email">
-            <?php country_dropdown(); ?>
-            <iput id="edit-bio" type="textarea" 
+        <form id="edit-form" method="post" action="action_edit_profile.php">
+            <input type="hidden" name="username" value="<?= $user['username'] ?>">
+            <input id="edit-name" type="text" name="name" placeholder="Name" value="<?= $user['fullname'] ?>">
+            <input id="edit-email" type="text" name="email" placeholder="Email" value="<?= $user['email'] ?>">
+            <?php country_dropdown($user['country']); ?>
+            <textarea name="bio" id="edit-bio" form="edit-form" cols="20" rows="10" placeholder="Enter a small bio about yourself!"><?php echo$user['bio'];?></textarea>
             <input id="edit-password" type="password" name="password" placeholder="New Password">
             <input id="edit-confirmpassword" type="password" name="confirm-password" placeholder="Confirm Your New Password">
             <input id="edit-submit" type="submit" value="Edit Profile">
         </form>
-        <p> Already have an account? Login <a href="login.php"> here! </a> </p>
         <a href="main_page.php"> <p> Or click here to go back ← </p> </a>
     </div>
 <?php } ?>
 
-<?php function country_dropdown() { ?>
+<?php function country_dropdown($def_country) { ?>
     <select id="edit-country" name="country">
-        <option value="Country">Country:</option>
+        <option value="<?=$def_country?>"><?php
+            if($def_country==null) echo 'Country:';
+            else echo $def_country;
+        ?></option>
         <option value="Afghanistan">Afghanistan</option>
         <option value="Åland Islands">Åland Islands</option>
         <option value="Albania">Albania</option>

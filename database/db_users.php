@@ -47,6 +47,25 @@
     $stmt->execute(array($username, $hash_pass, $name, null, null, null, date('Y-m-d')));
   }
 
-?>
+  function update_user_details($username, $name, $email, $country, $bio) {
+    global $db;
 
-<!-- H:i:s
+    $stmt = $db->prepare("UPDATE users
+                          SET fullname = ?, email = ?, country = ?, bio = ?
+                          WHERE username = ?");
+    $stmt->execute(array($name, $email, $country, $bio, $username));
+  }
+
+  function update_user_password($username, $password) {
+    global $db;
+
+    $options = ['cost' => 12];
+    $hash_password = password_hash($password, PASSWORD_DEFAULT, $options);
+
+    $stmt = $db->prepare("UPDATE users
+                          SET password = ?
+                          WHERE username = ?");
+    $stmt->execute(array($hash_password, $username));
+  }
+
+?>
