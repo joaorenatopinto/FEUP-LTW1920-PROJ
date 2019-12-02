@@ -15,7 +15,7 @@
 
     $query = "SELECT *
               FROM property
-              WHERE property.location L IKE ? AND
+              WHERE property.location LIKE ? AND
                     property.price BETWEEN ? AND ?";
 
     switch($price) {

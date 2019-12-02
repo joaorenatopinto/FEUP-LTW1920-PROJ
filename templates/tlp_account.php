@@ -79,7 +79,7 @@
         <header>
             <h3>Edit Your Profile</h3>
         </header>
-        <form id="edit-form" method="post" action="action_edit_profile.php">
+        <form id="edit-form" method="post" action="action_edit_profile.php" enctype="multipart/form-data">
             <input type="hidden" name="username" value="<?= $user['username'] ?>">
             <input id="edit-name" type="text" name="name" placeholder="Name" value="<?= $user['fullname'] ?>">
             <input id="edit-email" type="text" name="email" placeholder="Email" value="<?= $user['email'] ?>">
@@ -87,6 +87,7 @@
             <textarea name="bio" id="edit-bio" form="edit-form" cols="20" rows="10" placeholder="Enter a small bio about yourself!"><?php echo$user['bio'];?></textarea>
             <input id="edit-password" type="password" name="password" placeholder="New Password">
             <input id="edit-confirmpassword" type="password" name="confirm-password" placeholder="Confirm Your New Password">
+            <input type="file" name="image" id="image"/>
             <input id="edit-submit" type="submit" value="Edit Profile">
         </form>
         <a href="main_page.php"> <p> Or click here to go back ← </p> </a>
