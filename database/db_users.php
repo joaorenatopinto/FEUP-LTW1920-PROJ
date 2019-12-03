@@ -40,7 +40,8 @@
   function insert_user($username, $password, $name) {
     global $db;
 
-    $hash_pass = password_hash($password, PASSWORD_DEFAULT);
+    $options = ['cost' => 12];
+    $hash_pass = password_hash($password, PASSWORD_DEFAULT, $options);
 
     $stmt = $db->prepare("INSERT INTO users VALUES(?, ?, ?, ?, ?, ?, ?)");
     $stmt->execute(array($username, $hash_pass, $name, null, null, null, date('Y-m-d')));

@@ -23,7 +23,7 @@ CREATE TABLE property (
     type INTEGER, -- 0: flat/apartment ; 1: house
     price INTEGER,
     area INTEGER,
-    --postdate DATETIME--,
+    postdate DATETIME--
     --startAvailablePeriod DATE,
     --endAvailablePeriod DATE
 );
