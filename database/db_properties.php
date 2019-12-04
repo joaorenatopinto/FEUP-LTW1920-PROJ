@@ -85,6 +85,12 @@
     return $stmt->fetchAll();
   }
 
-  //function insert_user($user, )
+  function insert_property($values) {
+    global $db;
+    $stmt = $db->prepare("INSERT INTO property (title, owner, description, country, location, adress, nbathrooms, nbedrooms, nkitchens, nlivingrooms, type, price, area, startAvailablePeriod, endAvailablePeriod)
+                          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->execute($values);
+    return $stmt->fetchAll();
+  }
 
 ?>

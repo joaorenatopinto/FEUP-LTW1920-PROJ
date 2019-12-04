@@ -104,6 +104,7 @@ if(!isset($_SESSION['username']))
             <input id="lp-startPeriod" type="date" name="startDate"/>
             <br/>
             <input id="lp-endPeriod" type="date" name="endDate"/>
+            <br/>
             <input id="lp-submit" type="submit" value="List Property">
         </form>
     </div>

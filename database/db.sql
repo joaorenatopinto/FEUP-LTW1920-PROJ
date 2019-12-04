@@ -9,7 +9,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE property (
-    id INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     title VARCHAR,
     owner VARCHAR REFERENCES users,
     description VARCHAR,
@@ -23,9 +23,8 @@ CREATE TABLE property (
     type INTEGER, -- 0: flat/apartment ; 1: house
     price INTEGER,
     area INTEGER,
-    postdate DATETIME--
-    --startAvailablePeriod DATE,
-    --endAvailablePeriod DATE
+    startAvailablePeriod DATE,
+    endAvailablePeriod DATE
 );
 
 CREATE TABLE reservation (
@@ -69,7 +68,8 @@ INSERT INTO property VALUES(
     1,
     800,
     249,
-    '2007-05-08 12:35:29'
+    '2017-11-08',
+    '2017-11-10'
 );
 
 INSERT INTO property VALUES(
@@ -87,7 +87,8 @@ INSERT INTO property VALUES(
     1,
     250,
     194,
-    '2017-11-08 09:35:29'
+    '2017-11-08',
+    '2017-11-10'
 );
 
 INSERT INTO property VALUES(
@@ -105,7 +106,8 @@ INSERT INTO property VALUES(
     1,
     120,
     200,
-    '2015-05-07 12:50:29'
+    '2017-11-08',
+    '2017-11-10'
 );
 
 
@@ -124,7 +126,8 @@ INSERT INTO property VALUES(
     1,
     80,
     200,
-    '2015-05-07 12:50:29'
+    '2017-11-08',
+    '2017-11-10'
 );
 
 INSERT INTO property VALUES(
@@ -142,5 +145,6 @@ INSERT INTO property VALUES(
     1,
     1000,
     1000,
-    '2015-05-07 12:50:29'
+    '2017-11-08',
+    '2017-11-10'
 );
