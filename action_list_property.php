@@ -1,7 +1,7 @@
 <?php
     include_once('database/db_properties.php');
     session_start();
-    if(isset($_SESSION['username'])) {
+    
         $user = $_SESSION['username'];
         print($user);
         $title = $_POST['title'];
@@ -32,9 +32,5 @@
         print($start);
         $end = $_POST['endDate'];
         print($end);
-    }
-    else {
-        header('Location: login.php');
-    }
    
 ?>
