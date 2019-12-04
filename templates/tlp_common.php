@@ -28,7 +28,7 @@
                 <li><a href="profile.php">Profile</a></li>
             </ul>
         </nav>
-        <a href="#"><button>List Property</button></a>
+        <a href="list_property.php"><button>List Property</button></a>
     </header>
 <?php } ?>
 
