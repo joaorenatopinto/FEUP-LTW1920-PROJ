@@ -2,6 +2,8 @@
     include_once('templates/tlp_common.php');
     include_once('templates/tlp_account.php');
     //session_start();
+    draw_header();
+    draw_navbar();
     draw_login_header();
     draw_login();
     //print($_SESSION['username']);
