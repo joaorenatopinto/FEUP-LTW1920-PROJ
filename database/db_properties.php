@@ -90,7 +90,7 @@
     $stmt = $db->prepare("INSERT INTO property (title, owner, description, country, location, adress, nbathrooms, nbedrooms, nkitchens, nlivingrooms, type, price, area, startAvailablePeriod, endAvailablePeriod)
                           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->execute($values);
-    return $stmt->fetchAll();
+    return $stmt->fetchAll(); //pode se retirar linha (?)
   }
 
 ?>

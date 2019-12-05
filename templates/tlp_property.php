@@ -107,3 +107,12 @@ if(!isset($_SESSION['username']))
         </form>
     </div>
 <?php } ?>
+
+<?php function draw_reservation_ui($property_id) { ?>
+    <form id="reservation-form" method="post" action="action_reservation.php">
+        <input type="hidden" name="property_id" value="<?= $property_id ?>">
+        <input type="date" id="reservation-start" name="reservation-start"/>
+        <input type="date" id="reservation-end" name="reservation-end"/>
+        <input type="submit" id="reservation-submit" value="Submit Reservation"/>
+    </form>
+<?php } ?>

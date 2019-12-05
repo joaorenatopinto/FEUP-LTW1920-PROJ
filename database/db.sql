@@ -27,10 +27,11 @@ CREATE TABLE property (
     endAvailablePeriod DATE
 );
 
-CREATE TABLE reservation (
-    id INTEGER PRIMARY KEY,
+CREATE TABLE reservations (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     owner_id INTEGER REFERENCES users,
     client_id INTEGER REFERENCES users,
+    property_id INTEGER REFERENCES property,
     start_date DATE,
     end_date DATE
 );
@@ -53,6 +54,16 @@ INSERT INTO users VALUES(
     '2019-20-11'
 );
 
+INSERT INTO users VALUES(
+    'sonic2',
+    '7110eda4d09e062aa5e4a390b0a572ac0d2c0220',
+    'Jacinto Leite Capelo Rego',
+    'Portugal',
+    'sonic2@sonic2.sonic2',
+    'aodbawodnabwoudnawod',
+    '2019-20-11'
+);
+
 INSERT INTO property VALUES(
     1,
     'Casa férias do estrondo varanda do estrondo',
@@ -68,8 +79,17 @@ INSERT INTO property VALUES(
     1,
     800,
     249,
-    '2017-11-08',
-    '2017-11-10'
+    '2020-01-01',
+    '2020-01-30'
+);
+
+INSERT INTO reservations VALUES(
+    1,
+    'sonic',
+    'sonic2',
+    1,
+    '2020-01-10',
+    '2020-01-15'
 );
 
 INSERT INTO property VALUES(
