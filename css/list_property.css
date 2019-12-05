@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.list-property-card {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.list-property-card header h3 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+#list-property-form {
+    flex-direction: column;
+    justify-content: space-around;
+    display: flex;
+    background-color: white;
+    padding: 30px 30px 50px 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    height: 900px;
+}
+
+#list-property-form input {
+    border: 0px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #708090;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#list-property-form input::placeholder {
+    font-size: 20px;
+    color: #708090;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#list-property-form textarea {
+    resize: none;
+}
+
+#lp-submit {
+    padding: 10px 0px 10px 0px;
+    border-bottom: 0px !important;
+    color: white;
+    border-top: 30px;
+    background-color: #a4c739;
+    position:absolute;
+    width: 363px;
+    border-radius: 0px 0px 5px 5px;
+    transform: translateY(480px) translateX(-30px);
+}

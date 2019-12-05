@@ -57,6 +57,7 @@ function draw_list_property_header()
         <meta charset="UTF-8">
         <link href="css/list_property.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
@@ -92,11 +93,8 @@ if(!isset($_SESSION['username']))
             <input id="lp-kitchens" type="number" name="kitchens" placeholder="No. of kitchens"/>
             <br/>
             <input id="lp-livingrooms" type="number" name="livingrooms" placeholder="No. of livingrooms"/>
-            <br/>
-            <input type="radio" name="type" value="flat"> Flat/Apartment
-            <br/>
+            <input type="radio" name="type" id="flat" value="flat"> Flat/Apartment
             <input type="radio" name="type" value="house"> House
-            <br/>
             <input id="lp-price" type="number" name="price" placeholder="Price per day (€)"/>
             <br/>
             <input id="lp-area" type="number" name="area" placeholder="Area of the property"/>
