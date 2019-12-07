@@ -86,22 +86,22 @@ if(!isset($_SESSION['username']))
             <br/>
             <input id="lp-adress" type="text" name="adress" placeholder="Adress"/>
             <br/>
-            <input id="lp-bathrooms" type="number" name="bathrooms" placeholder="No. of bathrooms"/>
+            <input id="lp-bathrooms" type="number" min="0" name="bathrooms" placeholder="No. of bathrooms"/>
             <br/>
-            <input id="lp-bedrooms" type="number" name="bedrooms" placeholder="No. of bedrooms"/>
+            <input id="lp-bedrooms" type="number" min="0" name="bedrooms" placeholder="No. of bedrooms"/>
             <br/>
-            <input id="lp-kitchens" type="number" name="kitchens" placeholder="No. of kitchens"/>
+            <input id="lp-kitchens" type="number" min="0" name="kitchens" placeholder="No. of kitchens"/>
             <br/>
-            <input id="lp-livingrooms" type="number" name="livingrooms" placeholder="No. of livingrooms"/>
+            <input id="lp-livingrooms" type="number" min="0" name="livingrooms" placeholder="No. of livingrooms"/>
             <input type="radio" name="type" id="flat" value="flat"> Flat/Apartment
             <input type="radio" name="type" value="house"> House
             <input id="lp-price" type="number" name="price" placeholder="Price per day (€)"/>
             <br/>
             <input id="lp-area" type="number" name="area" placeholder="Area of the property"/>
             <br/>
-            <input id="lp-startPeriod" type="date" name="startDate"/>
+            <input id="lp-startPeriod" type="date" name="startDate" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" />
             <br/>
-            <input id="lp-endPeriod" type="date" name="endDate"/>
+            <input id="lp-endPeriod" type="date" name="endDate" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
             <br/>
             <input id="lp-submit" type="submit" value="List Property">
         </form>
