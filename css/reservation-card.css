@@ -1,7 +1,7 @@
-.property-card-container {
+.reservation-card-container {
     margin-top: 25px;
     width: 100%;
-    height: 260px;
+    height: 180px;
     background-color: white;
     border-radius: 4px;
     grid-column-start: 2;
@@ -10,85 +10,75 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.property-card {
+.reservation-card {
     display: flex;
-    
 }
 
-.property-img {
-    height: 260px;
-    width: 390px;
+.reservation-img {
+    height: 180px;
+    width: auto;
     margin-right: 20px;
 }
 
-.property-img img {
+.reservation-img img {
     object-fit: cover;
     height: inherit;
     width: inherit;
     border-radius: 4px 0px 0px 4px;
 }
 
-.property-details {
+.reservation-details {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.property-features {
-    border-top: 1px solid #708090;
-    padding-top: 8px;
-    display: flex;
-    color: #708090;
-    justify-content: space-between;
-    padding-right: 400px;
-}
-
-.property-pricing {
+.reservation-pricing {
     color: #2E8CAE;
 }
 
-.property-region {
+.reservation-region {
     text-transform: uppercase;
     color: #708090;
     margin: 0px;
     font-size: 1em;
 }
 
-.property-title {
+.reservation-title {
     margin: 0px;
     font-size: 1.3em;
     color: black;
 }
 
-.property-title a{
+.reservation-title a{
     color: black;
 }
 
-.property-title a:link{
+.reservation-title a:link{
     text-decoration: none;
 }
 
-.property-pricing {
+.reservation-pricing {
     margin: 0px;
     font-size: 1em;
 }
 
-.property-description {
+.reservation-description {
     color: #708090;
 }
 
-.property-area img {
+.reservation-area img {
     width: 15px;
 }
 
-.property-bedrooms img {
+.reservation-bedrooms img {
     width: 15px;
 }
 
-.property-bathrooms img {
+.reservation-bathrooms img {
     width: 15px;
 }
 
-.property-kitchens img {
+.reservation-kitchens img {
     width: 15px;
 }

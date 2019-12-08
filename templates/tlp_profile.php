@@ -1,4 +1,4 @@
-<?php include_once('tlp_property.php'); ?>
+<?php include_once('tlp_property.php'); include_once('tlp_reservation.php'); ?>
 
 <?php function draw_profile_card($user)
 { ?>
@@ -27,14 +27,18 @@
     </div>
 <?php } ?>
 
-<?php function draw_profile_ui($properties)
-{ ?>
+<?php function draw_profile_ui($reservations, $reservation_properties, $properties){ ?>
+    <script type="text/javascript" src="scripts/profile.js"></script>
     <div class="profile-properties-reservations">
-        <input class="profile-show-properties" type="button" value="Properties">
+        <input class="profile-show-properties" type="button" value="Properties" onclick="profile_show_actions(event)">
+        <input class="profile-show-reservations" type="button" value="Reservations" onclick="profile_show_actions(event)">
     </div>
     <?php
         foreach($properties as $property) {
             draw_property($property);
         }
+        foreach($reservations as $key=>$reservation) {
+            draw_reservation_card($reservation, $reservation_properties[$key][0]);
+        }   
     ?>
 <?php } ?>
