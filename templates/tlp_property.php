@@ -17,18 +17,22 @@
                 <div class="property-features">
                     <div class="property-area">
                         <span class="area-icon"> </span>
+                            <img alt="area" src="images/resources/area.png">
                         <span class="value"> <?= $property['area'] ?>m² </span>
                     </div>
                     <div class="property-bedrooms">
                         <span class="bedrooms-icon"> </span>
+                            <img alt="bedroom" src="images/resources/bedroom.png">
                         <span class="value"> <?= $property['nbedrooms'] ?> bedrooms </span>
                     </div>
                     <div class="property-bathrooms">
                         <span class="bathroom-icon"> </span>
+                            <img alt="bathroom" src="images/resources/bathroom.png">
                         <span class="value"> <?= $property['nbathrooms'] ?> bathrooms </span>
                     </div>
                     <div class="property-kitchens">
                         <span class="kitchen-icon"> </span>
+                            <img alt="kitchen" src="images/resources/kitchen.png">
                         <span class="value"> <?= $property['nkitchens'] ?> kitchens </span>
                     </div>
                 </div>

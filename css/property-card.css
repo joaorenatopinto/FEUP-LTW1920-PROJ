@@ -77,3 +77,19 @@
 .property-description {
     color: #708090;
 }
+
+.property-area img {
+    width: 15px;
+}
+
+.property-bedrooms img {
+    width: 15px;
+}
+
+.property-bathrooms img {
+    width: 15px;
+}
+
+.property-kitchens img {
+    width: 15px;
+}

@@ -53,11 +53,10 @@ body {
 
 #li-submit {
     padding: 10px 0px 10px 0px;
-    border-bottom: 0px;
     color: white;
     border-top: 30px;
     background-color: #a4c739;
-    width: 302px;
+    width: 311px;
     border-radius: 0px 0px 5px 5px;
     position:absolute;
     transform: translateY(102px) translateX(-30px);

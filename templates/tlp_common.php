@@ -2,7 +2,7 @@
     <!DOCTYPE html>
     <html lang="en-US">
     <head>
-        <title>Houst.</title>
+        <title>houst</title>
         <meta charset="UTF-8">
         <link href="css/navbar.css" rel="stylesheet">
         <link href="css/footer.css" rel="stylesheet">
@@ -14,8 +14,7 @@
     </head>
     <body>
 <?php } ?>
-
-<!-- fazer aceitar $username como argumento para fazer navbar diferente para user -->
+    
 <?php function draw_navbar(){ ?>
     <header class="navbar">
         <div class="logo_container">
