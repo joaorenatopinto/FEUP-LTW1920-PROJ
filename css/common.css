@@ -4,6 +4,6 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 1.6fr 1fr auto;
     background-color: #D3D3D3;
 }   
