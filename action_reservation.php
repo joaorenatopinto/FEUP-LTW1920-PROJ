@@ -27,7 +27,7 @@
                 break;
             }
         }
-        if($valid) insert_reservation([$property['owner_id'], $_SESSION['username'], $_POST['property_id'], $startDate, $endDate]);
+        if($valid) insert_reservation([$property['owner'], $_SESSION['username'], $_POST['property_id'], $startDate, $endDate]);
     }
     //else print('3');
 ?>
