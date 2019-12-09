@@ -97,8 +97,8 @@ if(!isset($_SESSION['username']))
             <input id="lp-kitchens" type="number" min="0" name="kitchens" placeholder="No. of kitchens"/>
             <br/>
             <input id="lp-livingrooms" type="number" min="0" name="livingrooms" placeholder="No. of livingrooms"/>
-            <input type="radio" name="type" id="flat" value="flat"> Flat/Apartment
-            <input type="radio" name="type" value="house"> House
+            <div> <input type="radio" name="type" id="flat" value="flat"> Flat/Apartment </div>
+            <div> <input type="radio" name="type" value="house"> House </div>
             <input id="lp-price" type="number" name="price" placeholder="Price per day (€)"/>
             <br/>
             <input id="lp-area" type="number" name="area" placeholder="Area of the property"/>
