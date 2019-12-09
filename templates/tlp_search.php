@@ -31,7 +31,11 @@
         <input type="date" id="search-date-start" name="search-date-start"/>
         <input type="date" id="search-date-end" name="search-date-end"/>
 
-        <div> <input type="radio" name="search-type" id="flat" value="flat"> Flat/Apartment </div>
-        <div> <input type="radio" name="search-type" value="house"> House </div>
+        <input type="radio" name="search-type" value="flat"> Flat/Apartment
+        <input type="radio" name="search-type" value="house"> House
+        <input type="radio" name="search-type" value="any" checked> Any
+        
+
+        <input id="lp-submit" type="submit" value="Search">
     </form>
 <?php } ?>

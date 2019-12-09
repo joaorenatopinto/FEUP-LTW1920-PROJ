@@ -14,10 +14,10 @@
     draw_header();
     draw_navbar();
 
-    $search_result = search_properties($location, $price, $bedrooms, $bathrooms, $start_date, $end_date);
+    $search_result = search_properties($location, $price, $bedrooms, $bathrooms, $start_date, $end_date, $type);
     foreach($search_result as $result) {
+        if($result['startAvailablePeriod'] < $start_date) print('DWOANDWANDW');
         draw_property($result);
     }
 
-    //draw_footer();
 ?>

@@ -10,7 +10,7 @@
     return $stmt->fetchAll();
   }
 
-  function search_properties($location, $price, $bedrooms) {
+  function search_properties($location, $price, $bedrooms, $bathrooms, $start_date, $end_date, $type) {
     global $db;
 
     $query = "SELECT *
@@ -69,6 +69,38 @@
         $query .= " AND property.nbedrooms >= 5;";
         break;
     }
+
+    switch($bathrooms) {
+      case 0:
+        $query .= " AND property.nathrooms >= 0;";
+        break;
+      case 1:
+        $query .= " AND property.nbathrooms = 1;";
+        break;
+      case 2:
+        $query .= " AND property.nbathrooms = 2;";
+        break;
+      case 3:
+        $query .= " AND property.nbathrooms >= 3;";
+        break;
+    }
+
+    if(isset($start_date)) {
+      print($start_date);
+      $query .= " AND property.startAvailablePeriod < " . $start_date;
+    }
+
+    if(isset($end_date)) {
+      print($end_date);
+      $query .= " AND property.endAvailablePeriod > " . $end_date;
+    }
+
+    if($type != 'any') {
+      $query .= "AND property.type = " . $type;
+    }
+
+    if('2020-01-01' < '2020-05-01') print('aiwdaodin');
+    else print('apidwnawpd');
 
     //print($query);
     $stmt = $db->prepare($query);
