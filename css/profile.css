@@ -3,11 +3,12 @@
     background-color: white;
     grid-column-start: 2;
     grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
     border-radius: 4px;
     font-family: 'Souce Sans Pro', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 100%;
-
 }
 
 .profile-card {
