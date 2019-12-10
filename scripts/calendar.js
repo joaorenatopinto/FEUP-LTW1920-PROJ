@@ -14,9 +14,6 @@ selectMonth = document.getElementById("month");
 
 
 createYear = generate_year_range(1970, 2050);
-/** or
- * createYear = generate_year_range( 1970, currentYear );
- */
 
 document.getElementById("year").innerHTML = createYear;
 
@@ -26,24 +23,9 @@ var lang = calendar.getAttribute('data-lang');
 var months = "";
 var days = "";
 
-var monthDefault = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-var dayDefault = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-if (lang == "en") {
-    months = monthDefault;
-    days = dayDefault;
-} else if (lang == "id") {
-    months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
-    days = ["Ming", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"];
-} else if (lang == "fr") {
-    months = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
-    days = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
-} else {
-    months = monthDefault;
-    days = dayDefault;
-}
-
+var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 var $dataHead = "<tr>";
 for (dhead in days) {

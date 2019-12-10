@@ -19,6 +19,7 @@
     if(isset($_SESSION['username'])) {
         if($property['owner']==$_SESSION['username']) {
             $reservations = get_property_reservations($property['id']);
+            draw_reservations_seperator();
             foreach($reservations as $reservation) {
                 draw_reservation_card($reservation, $property);
             }

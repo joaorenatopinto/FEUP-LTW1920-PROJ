@@ -99,9 +99,6 @@
       $query .= "AND property.type = " . $type;
     }
 
-    if('2020-01-01' < '2020-05-01') print('aiwdaodin');
-    else print('apidwnawpd');
-
     //print($query);
     $stmt = $db->prepare($query);
     $stmt->execute(array($location, $min, $max));

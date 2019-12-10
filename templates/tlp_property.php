@@ -120,3 +120,7 @@ if(!isset($_SESSION['username']))
         <input type="submit" id="reservation-submit" value="Submit Reservation"/>
     </form>
 <?php } ?>
+
+<?php function draw_reservations_seperator() { ?> 
+    <h6 class="reservations-seperator"> Reservations </h6>
+<?php } ?>
