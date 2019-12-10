@@ -11,6 +11,7 @@
         <link href="css/property-card.css" rel="stylesheet">
         <link href="css/reservation-card.css" rel="stylesheet">
         <link href="css/search-bar.css" rel="stylesheet">
+        <link href="css/calendar.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
