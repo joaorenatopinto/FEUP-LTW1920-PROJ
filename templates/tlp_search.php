@@ -38,6 +38,6 @@
         </select>
         
 
-        <input id="lp-submit" type="submit" value="Search">
+        <input id="search-submit" type="submit" value="Search">
     </form>
 <?php } ?>
