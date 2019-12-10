@@ -5,9 +5,11 @@
     include_once('templates/tlp_common.php');
     include_once('database/db_properties.php');
     include_once('database/db_reservations.php');
+    include_once('database/db_users.php');
     include_once('templates/tlp_property.php');
     include_once('templates/tlp_reservation.php');
     include_once('templates/tlp_calendar.php');
+    include_once('templates/tlp_profile.php');
 
     session_start();
 
@@ -27,6 +29,9 @@
         else {
             draw_reservation_ui($_GET['id']);
             draw_calendar();
+
+            $owner = get_user($property['owner']);
+            draw_profile_card($owner);
         }
     }
     else {
