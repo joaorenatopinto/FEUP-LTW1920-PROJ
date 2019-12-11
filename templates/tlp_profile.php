@@ -3,8 +3,12 @@
 <?php function draw_profile_card($user)
 { ?>
     <div class="profile-card-container">
-        <a href="editprofile.php?username=<?= $user['username'] ?>"> <button class="edit-profile">Edit Profile</button></a>
-        <a href="action_logout.php"><button class="edit-profile">Logout</button></a>
+        <?php
+            if($_SESSION['username'] == $user['username']) {
+                echo '<a href="editprofile.php?username=' . $user['username'] . '"> <button class="edit-profile">Edit Profile</button></a>';
+                echo '<a href="action_logout.php"><button class="edit-profile">Logout</button></a>';
+            }
+        ?>
         <div class="profile-card">
             <div class="profile-img"> 
                 <?php
