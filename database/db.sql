@@ -5,7 +5,7 @@ CREATE TABLE users (
     country VARCHAR,
     email VARCHAR,
     bio VARCHAR,
-    joindate DATE
+    joindate TEXT
 );
 
 CREATE TABLE property (
@@ -23,8 +23,8 @@ CREATE TABLE property (
     type INTEGER, -- 0: flat/apartment ; 1: house
     price INTEGER,
     area INTEGER,
-    startAvailablePeriod DATE,
-    endAvailablePeriod DATE
+    startAvailablePeriod TEXT,
+    endAvailablePeriod TEXT
 );
 
 CREATE TABLE reservations (
@@ -32,8 +32,8 @@ CREATE TABLE reservations (
     owner_id INTEGER REFERENCES users,
     client_id INTEGER REFERENCES users,
     property_id INTEGER REFERENCES property,
-    start_date DATE,
-    end_date DATE
+    start_date TEXT,
+    end_date TEXT
 );
 
 CREATE TABLE review (
@@ -44,30 +44,19 @@ CREATE TABLE review (
     comment VARCHAR
 );
 
-INSERT INTO users VALUES( 
-    'sonic',
-    '7110eda4d09e062aa5e4a390b0a572ac0d2c0220',
-    'Jacinto Leite Aquino Rego',
-    'Portugal',
-    'sonic@hotmail.com',
-    '¯\_(ツ)_/¯',
-    '2019-20-11'
-);
-
 INSERT INTO users VALUES(
-    'sonic2',
-    '7110eda4d09e062aa5e4a390b0a572ac0d2c0220',
-    'Jacinto Leite Capelo Rego',
+    'user',
+    '$2y$12$rNprhBIjM0tck6N4Bi2Y0u9kSbrOl.PFXKcoOjxM9c34N3KLSzZse',
+    'Nome do User',
     'Portugal',
-    'sonic2@sonic2.sonic2',
-    'aodbawodnabwoudnawod',
-    '2019-20-11'
+    'email_do_user@gmail.com',
+    '2019-12-11'
 );
 
 INSERT INTO property VALUES(
     1,
-    'Casa férias do estrondo varanda do estrondo',
-    'sonic',
+    'Casa do User 1',
+    'user',
     'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
     'Portugal',
     'Vila Real',
@@ -83,20 +72,11 @@ INSERT INTO property VALUES(
     '2020-01-30'
 );
 
-INSERT INTO reservations VALUES(
-    1,
-    'sonic',
-    'sonic2',
-    1,
-    '2020-01-10',
-    '2020-01-15'
-);
-
 INSERT INTO property VALUES(
     2,
     'Casa férias do estrondo varanda do estrondo',
-    'sonic',
-    'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
+    'user',
+    'Disponível de 01 a 20 de Fev. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
     'Portugal',
     'Aveiro',
     'Rua Venesa 123',
@@ -107,64 +87,6 @@ INSERT INTO property VALUES(
     1,
     250,
     194,
-    '2017-11-08',
-    '2017-11-10'
-);
-
-INSERT INTO property VALUES(
-    3,
-    'Casa férias do estrondo varanda do estrondo',
-    'sonic',
-    'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
-    'Portugal',
-    'Penafiel',
-    'Sameiro nº42',
-    1,
-    2, 
-    1,
-    1,
-    1,
-    120,
-    200,
-    '2017-11-08',
-    '2017-11-10'
-);
-
-
-INSERT INTO property VALUES(
-    4,
-    'MANSÃO YURI ARAUJO CRAQUE PENAFIEL INCLUI ROUPA INTERIOR',
-    'sonic',
-    'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
-    'Portugal',
-    'Penafiel',
-    'Sameiro nº42',
-    1,
-    2, 
-    1,
-    1,
-    1,
-    80,
-    200,
-    '2017-11-08',
-    '2017-11-10'
-);
-
-INSERT INTO property VALUES(
-    5,
-    'Mansão do Papá Cris',
-    'sonic',
-    'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
-    'Itália',
-    'Turim',
-    'Rua Messi 6969',
-    10,
-    10, 
-    10,
-    10,
-    1,
-    1000,
-    1000,
-    '2017-11-08',
-    '2017-11-10'
+    '2020-02-01',
+    '2020-02-20'
 );

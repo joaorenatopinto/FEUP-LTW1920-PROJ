@@ -85,12 +85,12 @@
         break;
     }
 
-    if(isset($start_date) && $start_date!="") {
-      $query .= " AND property.startAvailablePeriod < " . $start_date;
+    if(isset($start_date) && $start_date!="") { //
+      $query .= " AND property.startAvailablePeriod <= '" . $start_date . "'";
     }
 
     if(isset($end_date) && $end_date!="") {
-      $query .= " AND property.endAvailablePeriod > " . $end_date;
+      $query .= " AND property.endAvailablePeriod >= '" . $end_date . "'";
     }
 
     if($type != 'any') {
