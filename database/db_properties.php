@@ -119,7 +119,18 @@
     $stmt = $db->prepare("INSERT INTO property (title, owner, description, country, location, adress, nbathrooms, nbedrooms, nkitchens, nlivingrooms, type, price, area, startAvailablePeriod, endAvailablePeriod)
                           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->execute($values);
-    return $stmt->fetchAll(); //pode se retirar linha (?)
+
+    $stmt = $db->prepare("SELECT last_insert_rowid()");
+    $stmt->execute();
+
+    return $stmt->fetchAll()[0]['last_insert_rowid()'];
   }
 
+  function get_last_insert_rowid() {
+    global $db;
+    $stmt = $db->prepare("SELECT last_insert_rowid()");
+    $stmt->execute();
+
+    $stmt->fetchAll();
+  }
 ?>

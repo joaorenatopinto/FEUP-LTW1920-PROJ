@@ -9,7 +9,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE property (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     title VARCHAR,
     owner VARCHAR REFERENCES users,
     description VARCHAR,
@@ -28,7 +28,7 @@ CREATE TABLE property (
 );
 
 CREATE TABLE reservations (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY,
     owner_id INTEGER REFERENCES users,
     client_id INTEGER REFERENCES users,
     property_id INTEGER REFERENCES property,

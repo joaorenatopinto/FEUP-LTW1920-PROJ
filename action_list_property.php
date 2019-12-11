@@ -18,8 +18,11 @@
     $start = $_POST['startDate'];
     $end = $_POST['endDate'];
 
+    print_r($_FILES);
+
     if(strtotime($start) < strtotime($end)) {
-            insert_property([$title, $user, $description, $country, $location, $adress, $bathrooms, $bedrooms, $kitchens, $livingrooms, $type, $price, $area, $start, $end]);
+        $id = insert_property([$title, $user, $description, $country, $location, $adress, $bathrooms, $bedrooms, $kitchens, $livingrooms, $type, $price, $area, $start, $end]);
+        imagepng(imagecreatefromstring(file_get_contents($_FILES['property_image']['tmp_name'])), "images/properties/$id.png");
         header('Location: main_page.php');
     }
     else header('Location: list_property.php');

@@ -5,7 +5,7 @@
     <div class="property-card-container">
         <article class="property-card">
             <div class="property-img">
-                <img alt="none for now" src="images/estrondo.jpg">
+                <img alt="none for now" src="images/properties/<?=$property['id']?>.png">
             </div>
             <div class="property-details">
                 <h6 class="property-region"> <?= $property['location'] ?> </h6>
@@ -78,7 +78,7 @@ if(!isset($_SESSION['username']))
         <header>
             <h3>List Property</h3>
         </header>
-        <form id="list-property-form" method="post" action="action_list_property.php">
+        <form id="list-property-form" method="post" action="action_list_property.php" enctype="multipart/form-data">
             <input type="hidden" name="username" value="<?= $_SESSION['username'] ?>">
             <input id="lp-title" type="text" name="title" placeholder="Title for the ad"/>
             <br/>
@@ -106,6 +106,8 @@ if(!isset($_SESSION['username']))
             <input id="lp-startPeriod" type="date" name="startDate" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" />
             <br/>
             <input id="lp-endPeriod" type="date" name="endDate" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
+            <br/>
+            <input type="file" name="property_image" id="image"/>
             <br/>
             <input id="lp-submit" type="submit" value="List Property">
         </form>
