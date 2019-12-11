@@ -5,7 +5,13 @@
     <div class="property-card-container">
         <article class="property-card">
             <div class="property-img">
-                <img alt="none for now" src="images/properties/<?=$property['id']?>.png">
+                <img alt="none for now" src="images/properties/<?php
+                    if(file_exists('images/properties/' . $property['id'] . '.png')) {
+                        echo $property['id'] . '.png">';
+                    }
+                    else echo $property['id'] . '.jpg">';
+                ?>
+
             </div>
             <div class="property-details">
                 <h6 class="property-region"> <?= $property['location'] ?> </h6>
