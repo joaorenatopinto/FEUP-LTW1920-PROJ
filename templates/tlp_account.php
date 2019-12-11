@@ -53,7 +53,7 @@
         <form class="login-form" method="post" action="action_login.php">
             <input id="li-username" type="text" name="username" placeholder="Username" required="">
             <input id="li-password" type="password" name="password" placeholder="Password" required="">
-            <input id="li-submit" type="submit" value="Sign Up">
+            <input id="li-submit" type="submit" value="Log In">
         </form>
         <p> Don't have an account? Sign up <a href="signup.php">here! </a> </p>
         <a href="main_page.php"> <p> Or click here to go back ← </p> </a>

@@ -6,6 +6,7 @@
     $start_date = $_GET['search-date-start'];
     $end_date = $_GET['search-date-end'];
     $type = $_GET['search-type'];
+    $order = $_GET['order'];
 
     include_once('templates/tlp_common.php');
     include_once('database/db_properties.php');
@@ -18,7 +19,7 @@
 
     draw_search_interface();
 
-    $search_result = search_properties($location, $price, $bedrooms, $bathrooms, $start_date, $end_date, $type);
+    $search_result = search_properties($location, $price, $bedrooms, $bathrooms, $start_date, $end_date, $type, $order);
     foreach($search_result as $result) {
         draw_property($result);
     }
