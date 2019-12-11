@@ -1,14 +1,16 @@
-function get_reservations(date) {
-    if(window.XMLHttpRequest) {
+function loadDoc(property_id) {
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
-    }
-    else {
+    } else {
+        // code for IE6, IE5
         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
-
-    xmlhttp.onreadystatechange=function() {
-        if(xmlhttp.readyState==4 && xmlhttp.status==200) {
-            
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("txtHint").innerHTML = this.responseText;
         }
-    }
+    };
+    xmlhttp.open("GET","getreservations.php?q="+property_id,true);
+    xmlhttp.send();
 }
