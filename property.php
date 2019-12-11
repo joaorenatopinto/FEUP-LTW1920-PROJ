@@ -10,14 +10,40 @@
     include_once('templates/tlp_reservation.php');
     include_once('templates/tlp_calendar.php');
     include_once('templates/tlp_profile.php');
+    include_once('get_reservations.php');
 
     session_start();
 
     draw_header();
     draw_navbar();
-
     $property = get_property_by_id($_GET['id'])[0];
     draw_property($property);
+
+    ?>
+    <script type="text/javascript">
+    function loadDoc(property_id) {
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            let request = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            let request = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        request.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                let reservations = JSON.parse(this.responseText);
+            }
+        };
+        request.open("GET","getreservations.php?id="+property_id,true);
+        request.send();
+    }
+
+    loadDoc($property); 
+    </script>
+    <?php
+    
+    
+
     if(isset($_SESSION['username'])) {
         if($property['owner']==$_SESSION['username']) {
             $reservations = get_property_reservations($property['id']);
