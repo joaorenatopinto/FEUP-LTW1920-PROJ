@@ -14,7 +14,7 @@
 
         <select name="search-bedrooms" class="search-input-bedrooms">
             <option value="0"> No. Bedrooms </option>
-            <option value="1"> 1 bedrooms </option>
+            <option value="1"> 1 bedroom </option>
             <option value="2"> 2 bedrooms </option>
             <option value="3"> 3 bedrooms </option>
             <option value="4"> 4 bedrooms </option>
@@ -23,7 +23,7 @@
 
         <select name="search-bathrooms" class="search-input-bathrooms">
             <option value="0"> No. Bathrooms </option>
-            <option value="1"> 1 bathrooms</option>
+            <option value="1"> 1 bathroom</option>
             <option value="2"> 2 bathrooms</option>
             <option value="3"> 3+ bathrooms</option>
         </select>
@@ -32,7 +32,7 @@
         <input type="date" id="search-date-end" name="search-date-end"/>
 
         <select name="search-type" class="search-input-type">
-            <option value="any"> Any </option>
+            <option value="any"> Any House Type </option>
             <option value="flat"> Flat/Apartment </option>
             <option value="house"> House </option>
         </select>
