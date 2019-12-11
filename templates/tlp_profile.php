@@ -10,7 +10,8 @@
                 <?php
                     echo '<img alt="none" src="images/users/';
                     if(file_exists("images/users/" . $user['username'] . ".png")) echo $user['username'] . '.png">';
-                    else echo 'default.jpg">';
+                    else if(file_exists("images/users/" . $user['username'] . ".jpg")) echo $user['username'] . '.jpg">';
+                    else echo 'default.png">';
                 ?>
             </div>
             <div class="profile-details">

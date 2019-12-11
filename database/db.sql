@@ -50,6 +50,7 @@ INSERT INTO users VALUES(
     'Nome do User',
     'Portugal',
     'email_do_user@gmail.com',
+    'Bio do User. Bio do User. Bio do User. Bio do User. Bio do User. Bio do User. Bio do User. Bio do User. Bio do User. Bio do User. Bio do User.',
     '2019-12-11'
 );
 
