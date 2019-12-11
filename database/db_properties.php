@@ -10,7 +10,7 @@
     return $stmt->fetchAll();
   }
 
-  function search_properties($location, $price, $bedrooms, $bathrooms, $start_date, $end_date, $type) {
+  function search_properties($location, $price, $bedrooms, $bathrooms, $start_date, $end_date, $type, $order) {
     global $db;
 
     $query = "SELECT *
@@ -51,55 +51,69 @@
 
     switch($bedrooms) {
       case 0:
-        $query .= " AND property.nbedrooms >= 0;";
+        $query .= " AND property.nbedrooms >= 0";
         break;
       case 1:
-        $query .= " AND property.nbedrooms = 1;";
+        $query .= " AND property.nbedrooms = 1";
         break;
       case 2:
-        $query .= " AND property.nbedrooms = 2;";
+        $query .= " AND property.nbedrooms = 2";
         break;
       case 3:
-        $query .= " AND property.nbedrooms = 3;";
+        $query .= " AND property.nbedrooms = 3";
         break;
       case 4:
-        $query .= " AND property.nbedrooms = 4;";
+        $query .= " AND property.nbedrooms = 4";
         break;
       case 5:
-        $query .= " AND property.nbedrooms >= 5;";
+        $query .= " AND property.nbedrooms >= 5";
         break;
     }
 
     switch($bathrooms) {
       case 0:
-        $query .= " AND property.nathrooms >= 0;";
+        $query .= " AND property.nbathrooms >= 0";
         break;
       case 1:
-        $query .= " AND property.nbathrooms = 1;";
+        $query .= " AND property.nbathrooms = 1";
         break;
       case 2:
-        $query .= " AND property.nbathrooms = 2;";
+        $query .= " AND property.nbathrooms = 2";
         break;
       case 3:
-        $query .= " AND property.nbathrooms >= 3;";
+        $query .= " AND property.nbathrooms >= 3";
         break;
     }
 
-    if(isset($start_date)) {
-      print($start_date);
+    if(isset($start_date) && $start_date!="") {
       $query .= " AND property.startAvailablePeriod < " . $start_date;
     }
 
-    if(isset($end_date)) {
-      print($end_date);
+    if(isset($end_date) && $end_date!="") {
       $query .= " AND property.endAvailablePeriod > " . $end_date;
     }
 
     if($type != 'any') {
-      $query .= "AND property.type = " . $type;
+      $query .= " AND property.type = " . $type;
     }
 
-    //print($query);
+    switch($order) {
+      case 'price-asc':
+        $query .= " ORDER BY property.price ASC";
+        break;
+      case 'price-desc':
+        $query .= " ORDER BY property.price DESC";
+        break;
+      case 'newest':
+        $query .= " ORDER BY property.id DESC";
+        break;
+      case 'oldest':
+        $query .= " ORDER BY property.id ASC";
+        break;
+    }
+
+    $query .= ";";
+
     $stmt = $db->prepare($query);
     $stmt->execute(array($location, $min, $max));
     return $stmt->fetchAll();

@@ -37,6 +37,12 @@
             <option value="house"> House </option>
         </select>
         
+        <select name="order" class="order-by-select">
+            <option value="price-asc"> Order by Price: Low to High </option>
+            <option value="price-desc"> Order by Price: High to Low</option>
+            <option value="newest" selected> Order by Newest </option>
+            <option value="oldest"> Order by Oldest </option>
+        </select>
 
         <input id="search-submit" type="submit" value="Search">
     </form>
