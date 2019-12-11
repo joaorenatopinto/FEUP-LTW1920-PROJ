@@ -30,4 +30,5 @@
         if($valid) insert_reservation([$property['owner'], $_SESSION['username'], $_POST['property_id'], $startDate, $endDate]);
     }
     //else print('3');
+    header("Location: main_page.php");
 ?>

@@ -24,25 +24,24 @@
     function loadDoc(property_id) {
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
-            let request = new XMLHttpRequest();
+            var request = new XMLHttpRequest();
         } else {
             // code for IE6, IE5
-            let request = new ActiveXObject("Microsoft.XMLHTTP");
+            var request = new ActiveXObject("Microsoft.XMLHTTP");
         }
         request.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                let reservations = JSON.parse(this.responseText);
+                var reservations = JSON.parse(this.responseText);
+                document.write(reservations);
             }
         };
         request.open("GET","getreservations.php?id="+property_id,true);
         request.send();
-    }
-
-    loadDoc($property); 
+    } 
     </script>
     <?php
     
-    
+    echo "<script type='text/javascript'> loadDoc({$_GET['id']}); </script>";
 
     if(isset($_SESSION['username'])) {
         if($property['owner']==$_SESSION['username']) {
