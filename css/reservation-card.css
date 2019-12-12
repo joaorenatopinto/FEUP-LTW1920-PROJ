@@ -70,54 +70,38 @@
     color: #708090;
 }
 
-.reservation-area img {
-    width: 15px;
-}
-
-.reservation-bedrooms img {
-    width: 15px;
-}
-
-.reservation-bathrooms img {
-    width: 15px;
-}
-
-.reservation-kitchens img {
-    width: 15px;
-}
-
 /* Reservation card 2 */
 .reservation-card-container2 {
     margin-top: 25px;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
-    height: 180px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 11.25em;
     background-color: white;
     border-radius: 4px;
     grid-column-start: 2;
     grid-column-end: 3;
     font-family: 'Source Sans Pro', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.reservation-card2 {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .reservation-usr-image {
-    height: 160px;
+    height: 90%;
     width: auto;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    
+    padding-right: 5%;
+    display:inline-block;
+    
 }
 
 .reservation-usr-image img {
+    display:inline-block;
     object-fit: cover;
-    height: inherit;
-    width: inherit;
+    height: auto;
+    width: auto;
     border-radius: 50%;
     max-width:100%;
     max-height:100%;
