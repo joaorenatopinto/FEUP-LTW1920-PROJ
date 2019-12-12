@@ -86,34 +86,34 @@ if(!isset($_SESSION['username']))
         </header>
         <form id="list-property-form" method="post" action="action_list_property.php" enctype="multipart/form-data">
             <input type="hidden" name="username" value="<?= $_SESSION['username'] ?>">
-            <input id="lp-title" type="text" name="title" placeholder="Title for the ad"/>
+            <input id="lp-title" type="text" name="title" placeholder="Title for the ad" required/>
             <br/>
-            <textarea name="description" form="list-property-form" cols="20" rows="10" placeholder="Enter a description about of the house!"></textarea>
+            <textarea name="description" form="list-property-form" cols="20" rows="10" placeholder="Enter a description about of the house!" required></textarea>
             <br/>
             <?php country_dropdown(null); ?>
             <br/>
-            <input id="lp-location" type="text" name="location" placeholder="Location"/>
+            <input id="lp-location" type="text" name="location" placeholder="Location" required/>
             <br/>
-            <input id="lp-adress" type="text" name="adress" placeholder="Adress"/>
+            <input id="lp-adress" type="text" name="adress" placeholder="Adress" required/>
             <br/>
-            <input id="lp-bathrooms" type="number" min="0" name="bathrooms" placeholder="No. of bathrooms"/>
+            <input id="lp-bathrooms" type="number" min="0" name="bathrooms" placeholder="No. of bathrooms" required/>
             <br/>
-            <input id="lp-bedrooms" type="number" min="0" name="bedrooms" placeholder="No. of bedrooms"/>
+            <input id="lp-bedrooms" type="number" min="0" name="bedrooms" placeholder="No. of bedrooms" required/>
             <br/>
-            <input id="lp-kitchens" type="number" min="0" name="kitchens" placeholder="No. of kitchens"/>
+            <input id="lp-kitchens" type="number" min="0" name="kitchens" placeholder="No. of kitchens" required/>
             <br/>
-            <input id="lp-livingrooms" type="number" min="0" name="livingrooms" placeholder="No. of livingrooms"/>
-            <div> <input type="radio" name="type" id="flat" value="flat"> Flat/Apartment </div>
-            <div> <input type="radio" name="type" value="house"> House </div>
-            <input id="lp-price" type="number" name="price" placeholder="Price per day (€)"/>
+            <input id="lp-livingrooms" type="number" min="0" name="livingrooms" placeholder="No. of livingrooms" required/>
+            <div> <input type="radio" name="type" id="flat" value="flat" required> Flat/Apartment </div>
+            <div> <input type="radio" name="type" value="house" required> House </div>
+            <input id="lp-price" type="number" name="price" placeholder="Price per day (€)" required/>
             <br/>
-            <input id="lp-area" type="number" name="area" placeholder="Area of the property"/>
+            <input id="lp-area" type="number" name="area" placeholder="Area of the property" required/>
             <br/>
-            <input id="lp-startPeriod" type="date" name="startDate" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" />
+            <input id="lp-startPeriod" type="date" name="startDate" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" required/>
             <br/>
-            <input id="lp-endPeriod" type="date" name="endDate" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
+            <input id="lp-endPeriod" type="date" name="endDate" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" required/>
             <br/>
-            <input type="file" name="property_image" id="image"/>
+            <input type="file" name="property_image" id="image" required/>
             <br/>
             <input id="lp-submit" type="submit" value="List Property">
         </form>

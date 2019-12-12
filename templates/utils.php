@@ -1,5 +1,5 @@
 <?php function country_dropdown($def_country) { ?>
-    <select id="edit-country" name="country">
+    <select id="edit-country" name="country" required>
         <option value="<?=$def_country?>"><?php
             if($def_country==null) echo 'Country:';
             else echo $def_country;
