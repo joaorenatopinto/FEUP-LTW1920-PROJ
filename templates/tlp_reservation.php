@@ -12,7 +12,7 @@
             <div class="reservation-details">
                 <h6 class="reservation-region"> <?=$property['location'] ?> </h6>
                 <h4 class="reservation-title"> <a href="property.php?id=<?= $property['id'] ?>"> <?= $property['title'] ?> </a> </h4>
-                <h6 class="reservation-pricing"> <strong> <?= $property['price'] ?> € / day </strong> </h6>
+                <h6 class="reservation-pricing"> <strong> <?= $property['price'] ?> € / day (total: <?= (1+days_between_strdates($reservation['end_date'], $reservation['start_date'])) * $property['price'] ?> €)</strong> </h6>
                 <p class="reservation-start"> Start: <?= $reservation['start_date'] ?> </p>
                 <p class="reservation-end"> End: <?= $reservation['end_date'] ?> </p>
             </div>
@@ -34,10 +34,8 @@
             ?>
         </div>
         <div class="reservation-details2">
-            <h6 class="reservation-region2"> <?=$property['location'] ?> </h6>
-            <h4 class="reservation-title2"> <a href="property.php?id=<?= $property['id'] ?>"> <?= $property['title'] ?> </a> </h4>
+            <h4 class="reservation-client2"> Reservation made by <strong> <?= $client['fullname'] ?> </strong> </h4>
             <h6 class="reservation-pricing2"> <strong> <?= $property['price'] ?> € / day (total: <?= (1+days_between_strdates($reservation['end_date'], $reservation['start_date'])) * $property['price'] ?> €)</strong> </h6>
-            <p class="reservation-client2"> Reservation made by <strong> <?= $client['fullname'] ?> </strong> </p>
             <p class="reservation-start2"> <strong>Start:</strong> <?= $reservation['start_date'] ?> </p>
             <p class="reservation-end2"> <strong>End:</strong> <?= $reservation['end_date'] ?> </p>
         </div>

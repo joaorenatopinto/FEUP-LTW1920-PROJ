@@ -26,7 +26,7 @@
                 <h5 class="profile-email"> <?= $user['email'] ?> </h5>
                 <h6 class="profile-placeholder"> Bio: </h6>
                 <p class="profile-bio"> <?= $user['bio'] ?> </p>
-                <p class="profile-creation-date"> Member since 22/11/2019 </p>
+                <p class="profile-creation-date"> Member since <?= $user['joindate'] ?> </p>
             </div>
         </div>
     </div>

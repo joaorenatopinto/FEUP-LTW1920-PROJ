@@ -60,7 +60,6 @@
     text-decoration: none;
 }
 
-/**/
 .reservation-pricing {
     margin: 0px;
     font-size: 1em;
@@ -74,9 +73,9 @@
 .reservation-card-container2 {
     margin-top: 25px;
     width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-    height: 11.25em;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10em;
     background-color: white;
     border-radius: 4px;
     grid-column-start: 2;
@@ -91,7 +90,6 @@
 .reservation-usr-image {
     height: 90%;
     width: auto;
-    
     padding-right: 5%;
     display:inline-block;
     
@@ -113,21 +111,13 @@
     justify-content: space-around;
 }
 
+.reservation-client2 {
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
 .reservation-pricing2 {
     color: #2E8CAE;
-}
-
-.reservation-region2 {
-    text-transform: uppercase;
-    color: #708090;
-    margin: 0px;
-    font-size: 1em;
-}
-
-.reservation-title2 {
-    margin: 0px;
-    font-size: 1.3em;
-    color: black;
 }
 
 .reservation-title2 a {
