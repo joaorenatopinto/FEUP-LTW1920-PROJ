@@ -57,7 +57,8 @@
             $reservations = get_property_reservations($property['id']);
             draw_reservations_seperator();
             foreach($reservations as $reservation) {
-                draw_reservation_card($reservation, $property);
+                //draw_reservation_card($reservation, $property);
+                draw_reservation_card2($reservation, $property);
             }
         }
         else {

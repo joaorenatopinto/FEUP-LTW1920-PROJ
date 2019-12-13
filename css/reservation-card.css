@@ -1,6 +1,8 @@
 .reservation-card-container {
     margin-top: 25px;
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     height: 180px;
     background-color: white;
     border-radius: 4px;
@@ -67,18 +69,76 @@
     color: #708090;
 }
 
-.reservation-area img {
-    width: 15px;
+/* Reservation card 2 */
+.reservation-card-container2 {
+    margin-top: 25px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10em;
+    background-color: white;
+    border-radius: 4px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.reservation-bedrooms img {
-    width: 15px;
+.reservation-usr-image {
+    height: 90%;
+    width: auto;
+    padding-right: 5%;
+    display:inline-block;
+    
 }
 
-.reservation-bathrooms img {
-    width: 15px;
+.reservation-usr-image img {
+    display:inline-block;
+    object-fit: cover;
+    height: auto;
+    width: auto;
+    border-radius: 50%;
+    max-width:100%;
+    max-height:100%;
 }
 
-.reservation-kitchens img {
-    width: 15px;
+.reservation-details2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.reservation-client2 {
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+.reservation-pricing2 {
+    color: #2E8CAE;
+}
+
+.reservation-title2 a {
+    color: black;
+}
+
+.reservation-title2 a:link {
+    text-decoration: none;
+}
+
+.reservation-pricing2 {
+    margin: 0px;
+    font-size: 1em;
+}
+
+.reservation-client2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+} 
+
+.reservation-details2 p {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

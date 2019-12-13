@@ -1,6 +1,5 @@
-
 <?php function country_dropdown($def_country) { ?>
-    <select id="edit-country" name="country">
+    <select id="edit-country" name="country" required>
         <option value="<?=$def_country?>"><?php
             if($def_country==null) echo 'Country:';
             else echo $def_country;
@@ -251,3 +250,12 @@
         <option value="Zimbabwe">Zimbabwe</option>
     </select>
 <?php } ?>
+
+<?php function days_between_strdates($str_date1, $str_date2) {
+    $date1 = strtotime($str_date1);
+    $date2 = strtotime($str_date2);
+
+    $diff = abs($date1 - $date2);
+
+    return round($diff / (60 * 60 * 24));
+} ?>

@@ -5,8 +5,8 @@
     <div class="profile-card-container">
         <?php
             if($_SESSION['username'] == $user['username']) {
-                echo '<a href="editprofile.php?username=' . $user['username'] . '"> <button class="edit-profile">Edit Profile</button></a>';
-                echo '<a href="action_logout.php"><button class="edit-profile">Logout</button></a>';
+                //echo '<a href="editprofile.php?username=' . $user['username'] . '"> <button class="edit-profile">Edit Profile</button></a>';
+                //echo '<a href="action_logout.php"><button class="edit-profile">Logout</button></a>';
             }
         ?>
         <div class="profile-card">
@@ -26,7 +26,7 @@
                 <h5 class="profile-email"> <?= $user['email'] ?> </h5>
                 <h6 class="profile-placeholder"> Bio: </h6>
                 <p class="profile-bio"> <?= $user['bio'] ?> </p>
-                <p class="profile-creation-date"> Member since 22/11/2019 </p>
+                <p class="profile-creation-date"> Member since <?= $user['joindate'] ?> </p>
             </div>
         </div>
     </div>
