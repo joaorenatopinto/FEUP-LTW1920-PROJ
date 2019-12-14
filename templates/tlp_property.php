@@ -127,7 +127,6 @@ if(!isset($_SESSION['username']))
         <input type="date" id="reservation-end" name="reservation-end" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
         <input type="submit" id="reservation-submit" value="Submit Reservation"/>
     </form>
-    <p>Suggestions: <span id="txtHint"></span></p>
 <?php } ?>
 
 <?php function draw_reservations_seperator() { ?> 

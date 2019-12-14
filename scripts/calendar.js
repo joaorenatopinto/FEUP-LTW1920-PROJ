@@ -6,12 +6,40 @@ function generate_year_range(start, end) {
     return years;
 }
 
+function encodeForAjax(data) {  
+    return Object.keys(data).map(function(k){
+    return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
+    }).join('&')
+}
+function loadDoc(property_id) {
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        var request = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        var request = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    request.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var txt = "";
+            var  myObj = JSON.parse(this.responseText);
+            for (x in myObj) {
+                //txt += " Start= " + myObj[x].start_date + "End= " + myObj[x].end_date ;
+                reservations.push([myObj[x].start_date, myObj[x].end_date]);
+            }
+            console.log(reservations);
+    }
+    }; 
+    request.open("GET", "get_reservations.php?" + encodeForAjax({id: property_id}), true);
+    request.send();
+} 
+var reservations = [];
+loadDoc(id);
 today = new Date();
 currentMonth = today.getMonth();
 currentYear = today.getFullYear();
 selectYear = document.getElementById("year");
 selectMonth = document.getElementById("month");
-
 
 createYear = generate_year_range(1970, 2050);
 

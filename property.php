@@ -1,7 +1,4 @@
 <?php
-    //$property_id = $_GET['id'];
-    //print($_GET['id']);
-
     include_once('templates/tlp_common.php');
     include_once('database/db_properties.php');
     include_once('database/db_reservations.php');
@@ -10,47 +7,13 @@
     include_once('templates/tlp_reservation.php');
     include_once('templates/tlp_calendar.php');
     include_once('templates/tlp_profile.php');
-    //include_once('get_reservations.php');
 
     session_start();
 
     draw_header();
     draw_navbar();
     $property = get_property_by_id($_GET['id'])[0];
-    draw_property($property);
-
-    ?>
-    <script type="text/javascript">
-    function encodeForAjax(data) {  
-        return Object.keys(data).map(function(k){
-        return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
-        }).join('&')
-    }
-    function loadDoc(property_id) {
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            var request = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            var request = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        request.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var txt = "";
-               var  myObj = JSON.parse(this.responseText);
-                for (x in myObj) {
-                     txt += " Start= " + myObj[x].start_date + "End= " + myObj[x].end_date ;
-                }
-               document.getElementById("txtHint").innerHTML = txt;
-        }
-        }; 
-        request.open("GET", "get_reservations.php?" + encodeForAjax({id: property_id}), true);
-        request.send();
-    } 
-    </script>
-    <?php
-    
-    echo "<script type='text/javascript'> loadDoc({$_GET['id']}); </script>";
+    draw_property($property);    
 
     if(isset($_SESSION['username'])) {
         if($property['owner']==$_SESSION['username']) {
@@ -63,7 +26,7 @@
         }
         else {
             draw_reservation_ui($_GET['id']);
-            draw_calendar();
+            draw_calendar($_GET['id']);
 
             $owner = get_user($property['owner']);
             draw_profile_card($owner);

@@ -1,4 +1,4 @@
-<?php function draw_calendar() { ?>    
+<?php function draw_calendar($id) { ?>    
     <div class="wrapper">
         <div class="container-calendar">
             <h3 id="monthAndYear"></h3>
@@ -34,5 +34,6 @@
 
         </div>
     </div>
-    <script type="text/javascript" src="scripts/calendar.js"></script>
+    <script type="text/javascript" > var id = "<?= $id ?>"; </script>
+    <script type="text/javascript" src="scripts/calendar.js">  </script>
 <?php } ?>
