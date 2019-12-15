@@ -127,21 +127,23 @@ function showCalendar(month, year) {
                 cell.innerHTML = "<span>" + date + "</span>";
 
                 
-                for (i = 0; i < reservations.length; i++) {
-                    let start = new Date(reservations[i][0]);
-                    let end = new Date(reservations[x][1]);
-                    let currdate = new Date(year, month, date - 1);
+                for (h = 0; h < reservations.length; h++) {
+                    let start = new Date(reservations[h][0]);
+                    let end = new Date(reservations[h][1]);
+                    let currdate = new Date(year, month, date);
 
                     if(currdate >= start && currdate <= end){
                         cell.className = "date-picker unavailable";
-                        continue;
+                        break;
                     }
-                    else
+                    else{
                         cell.className = "date-picker available";
+                    }
                   }
                 if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
                     cell.className = "date-picker selected";
                 }
+
                 row.appendChild(cell);
                 date++;
             }
