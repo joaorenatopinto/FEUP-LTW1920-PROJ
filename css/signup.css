@@ -1,10 +1,3 @@
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .signup-card {
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -18,6 +11,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
 .signup-form {

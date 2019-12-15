@@ -38,10 +38,10 @@
         </select>
         
         <select name="order" class="order-by-select">
-            <option value="price-asc"> Order by Price: Low to High </option>
-            <option value="price-desc"> Order by Price: High to Low</option>
-            <option value="newest" selected> Order by Newest </option>
-            <option value="oldest"> Order by Oldest </option>
+            <option value="newest" <?php if(isset($_GET['order']) && $_GET['order']=="newest") echo 'selected'; ?>> Order by Newest </option>
+            <option value="oldest" <?php if(isset($_GET['order']) && $_GET['order']=="oldest") echo 'selected'; ?>> Order by Oldest </option>
+            <option value="price-asc" <?php if(isset($_GET['order']) && $_GET['order']=="price-asc") echo 'selected'; ?>> Order by Price: Low to High </option>
+            <option value="price-desc" <?php if(isset($_GET['order']) && $_GET['order']=="price-desc") echo 'selected'; ?>> Order by Price: High to Low</option>
         </select>
 
         <input id="search-submit" type="submit" value="Search">

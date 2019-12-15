@@ -4,7 +4,6 @@
     //session_start();
     draw_header();
     draw_navbar();
-    draw_login_header();
     draw_login();
     //print($_SESSION['username']);
     //draw_footer();
