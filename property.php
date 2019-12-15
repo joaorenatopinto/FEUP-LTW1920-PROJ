@@ -24,10 +24,8 @@
             }
         }
         else {
-            draw_reservation_ui($_GET['id']);
-
             $owner = get_user($property['owner']);
-            draw_profile_card($owner);
+            draw_reservation_ui($_GET['id'], $owner);
         }
     }
     else {

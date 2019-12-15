@@ -32,6 +32,27 @@
     </div>
 <?php } ?>
 
+<?php function draw_owner_card($user) { ?> 
+    <div class="owner-card-container">
+        <h3> Owner: </h3>
+        <div class="owner-img">
+            <?php
+                echo '<img alt="none" src="images/users/';
+                if(file_exists("images/users/" . $user['username'] . ".png")) echo $user['username'] . '.png">';
+                else if(file_exists("images/users/" . $user['username'] . ".jpg")) echo $user['username'] . '.jpg">';
+                else echo 'default.png">';
+            ?>
+        </div>
+
+        <div class="owner-details">
+            <h4 class="owner-name"> <?= $user['fullname'] ?></h4>
+            <p class="owner-country"> Country: <b> <?= $user['country'] ?> </b> </h6>
+            <p class="owner-email"> Email: <b> <?= $user['email'] ?> </b> </h6>
+            <p class="owner-creation-date"> Member since <?= $user['joindate'] ?> </p>
+        </div>
+    </div>
+<?php } ?>
+
 <?php function draw_profile_ui($reservations, $reservation_properties, $properties){ ?>
     <script type="text/javascript" src="scripts/profile.js"></script>
     <div class="profile-properties-reservations">
