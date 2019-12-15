@@ -1,4 +1,4 @@
-<?php include_once('utils.php');?>
+<?php include_once('utils.php'); include_once('templates/tlp_calendar.php'); ?>
 
 <?php function draw_property($property)
 {  ?>
@@ -121,12 +121,15 @@ if(!isset($_SESSION['username']))
 <?php } ?>
 
 <?php function draw_reservation_ui($property_id) { ?>
-    <form id="reservation-form" method="post" action="action_reservation.php">
-        <input type="hidden" name="property_id" value="<?= $property_id ?>">
-        <input type="date" id="reservation-start" name="reservation-start" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
-        <input type="date" id="reservation-end" name="reservation-end" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
-        <input type="submit" id="reservation-submit" value="Submit Reservation"/>
-    </form>
+    <div class="reservation-ui-container">
+        <?php draw_calendar($property_id); ?>
+        <form id="reservation-form" method="post" action="action_reservation.php">
+            <input type="hidden" name="property_id" value="<?= $property_id ?>">
+            <input type="date" id="reservation-start" name="reservation-start" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
+            <input type="date" id="reservation-end" name="reservation-end" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
+            <input type="submit" id="reservation-submit" value="Submit Reservation"/>
+        </form>
+    </div>
 <?php } ?>
 
 <?php function draw_reservations_seperator() { ?> 
