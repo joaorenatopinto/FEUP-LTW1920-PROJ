@@ -33,7 +33,9 @@ function loadDoc(property_id) {
     request.open("GET", "get_reservations.php?" + encodeForAjax({id: property_id}), true);
     request.send();
 } 
+
 var reservations = [];
+
 loadDoc(id);
 today = new Date();
 currentMonth = today.getMonth();
@@ -67,8 +69,6 @@ document.getElementById("thead-month").innerHTML = $dataHead;
 
 monthAndYear = document.getElementById("monthAndYear");
 showCalendar(currentMonth, currentYear);
-
-
 
 function next() {
     currentYear = (currentMonth === 11) ? currentYear + 1 : currentYear;
@@ -126,6 +126,18 @@ function showCalendar(month, year) {
                 cell.className = "date-picker";
                 cell.innerHTML = "<span>" + date + "</span>";
 
+                
+                for (i = 0; i < reservations.length; i++) {
+                    let start = new Date(reservations[i][0]);
+                    let end = new Date(reservations[x][1]);
+                    let currdate = new Date(year, month, date - 1);
+
+                    if(currdate > start && currdate < end)
+                        cell.className = "date-picker unavailable";
+                    else
+                        cell.className = "date-picker available";
+                  }
+                  
                 if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
                     cell.className = "date-picker selected";
                 }

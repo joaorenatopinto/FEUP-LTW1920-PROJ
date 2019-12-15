@@ -51,12 +51,12 @@
 }
 
 /* sunday */
-.date-picker .available {
+.date-picker.available {
   color: green;
 }
 
 /* friday */
-.date-picker .unavailable {
+.date-picker.unavailable {
   color: red;
 }
 
