@@ -8,3 +8,12 @@
     margin-bottom: 0px;
     color: #0B3B49 ;
 }
+
+.login-warning {
+    font-family: 'Source Sans Pro', sans-serif;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 5%;
+}

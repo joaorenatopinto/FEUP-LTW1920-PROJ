@@ -5,7 +5,6 @@
     include_once('database/db_users.php');
     include_once('templates/tlp_property.php');
     include_once('templates/tlp_reservation.php');
-    include_once('templates/tlp_calendar.php');
     include_once('templates/tlp_profile.php');
 
     session_start();
@@ -26,13 +25,12 @@
         }
         else {
             draw_reservation_ui($_GET['id']);
-            draw_calendar($_GET['id']);
 
             $owner = get_user($property['owner']);
             draw_profile_card($owner);
         }
     }
     else {
-        echo '<p> You need to be logged in to make a reservation. </p>';
+        echo '<p class="login-warning"> You need to be logged in to make a reservation. </p>';
     }
 ?>

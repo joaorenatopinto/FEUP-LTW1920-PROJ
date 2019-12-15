@@ -1,0 +1,14 @@
+.reservation-ui-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: white;
+    width: 50%;
+    margin-top: 3%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#reservation-form {
+    display: flex;
+    justify-content: space-evenly;
+}
