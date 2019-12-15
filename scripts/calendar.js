@@ -11,7 +11,7 @@ function encodeForAjax(data) {
     return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
     }).join('&')
 }
-function loadDoc(property_id) {
+function getReservations(property_id) {
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
         var request = new XMLHttpRequest();
@@ -21,10 +21,8 @@ function loadDoc(property_id) {
     }
     request.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            var txt = "";
             var  myObj = JSON.parse(this.responseText);
             for (x in myObj) {
-                //txt += " Start= " + myObj[x].start_date + "End= " + myObj[x].end_date ;
                 reservations.push([myObj[x].start_date, myObj[x].end_date]);
             }
             console.log(reservations);
@@ -34,9 +32,33 @@ function loadDoc(property_id) {
     request.send();
 } 
 
-var reservations = [];
+function getAvailability(property_id) {
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        var request = new XMLHttpRequest();
+    } else {
+        // code for IE6, IE5
+        var request = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    request.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var  myObj = JSON.parse(this.responseText);
+            availability_start = new Date(myObj[0].startAvailablePeriod);
+            availability_end = new Date (myObj[0].endAvailablePeriod);
+            console.log(availability_start);
+            console.log(availability_end);
+        }
+    }; 
+    request.open("GET", "get_availability.php?" + encodeForAjax({id: property_id}), true);
+    request.send();
+} 
 
-loadDoc(id);
+var reservations = [];
+var availability_start;
+var availability_end;
+
+getReservations(id);
+getAvailability(id);
 today = new Date();
 currentMonth = today.getMonth();
 currentYear = today.getFullYear();
@@ -126,13 +148,14 @@ function showCalendar(month, year) {
                 cell.className = "date-picker";
                 cell.innerHTML = "<span>" + date + "</span>";
 
-                
+                var currdate = new Date(year, month, date);
+
                 for (h = 0; h < reservations.length; h++) {
                     let start = new Date(reservations[h][0]);
                     let end = new Date(reservations[h][1]);
-                    let currdate = new Date(year, month, date);
+                   
 
-                    if(currdate >= start && currdate <= end){
+                    if((currdate >= start && currdate <= end )|| !(currdate >= availability_start && currdate <= availability_end )){
                         cell.className = "date-picker unavailable";
                         break;
                     }
@@ -143,7 +166,6 @@ function showCalendar(month, year) {
                 if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
                     cell.className = "date-picker selected";
                 }
-
                 row.appendChild(cell);
                 date++;
             }
