@@ -132,12 +132,13 @@ function showCalendar(month, year) {
                     let end = new Date(reservations[x][1]);
                     let currdate = new Date(year, month, date - 1);
 
-                    if(currdate > start && currdate < end)
+                    if(currdate >= start && currdate <= end){
                         cell.className = "date-picker unavailable";
+                        continue;
+                    }
                     else
                         cell.className = "date-picker available";
                   }
-                  
                 if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
                     cell.className = "date-picker selected";
                 }
