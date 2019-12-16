@@ -5,16 +5,18 @@
             <h3>Sign Up</h3>
         </header>
         <form class="signup-form" method="post" action="action_signup.php">
-            <input id="sp-firstname" type="text" name="firstname" placeholder="First Name" required="">
-            <input id="sp-lastname" type="text" name="lastname" placeholder="Last Name" required="">
-            <input id="sp-username" type="text" name="username" placeholder="Username" required="">
-            <input id="sp-password" type="password" name="password" placeholder="Password" required="">
-            <input id="sp-confirmpassword" type="password" name="confirm-password" placeholder="Confirm Your Password" required="">
+            <input id="sp-firstname" type="text" name="firstname" placeholder="First Name" required>
+            <input id="sp-lastname" type="text" name="lastname" placeholder="Last Name" required>
+            <input id="sp-username" type="text" name="username" placeholder="Username" required>
+            <input id="sp-password" type="password" name="password" placeholder="Password"  onKeyUp="checkStrength()" required>
+            <meter max="4" id="password-strength-meter"></meter>
+            <input id="sp-confirmpassword" type="password" name="confirm-password" placeholder="Confirm Your Password" required>
             <input id="sp-submit" type="submit" value="Sign Up">
         </form>
         <p> Already have an account? Login <a href="login.php"> here! </a> </p>
         <a href="main_page.php"> <p> Or click here to go back ← </p> </a>
     </div>
+    <script type="text/javascript" src="scripts/password.js">  </script>
 <?php } ?>
 
 <?php function draw_signup_header() { ?>
