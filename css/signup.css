@@ -17,17 +17,18 @@
 
 .signup-form {
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     display: flex;
     background-color: white;
-    padding: 30px 30px 50px 30px;
+    padding: 30px 30px 20px 30px;
     border-radius: 5px;
-    height: 300px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .signup-form input {
     border: 0px;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
     padding-bottom: 5px;
     border-bottom: 1px solid #708090;
     font-size: 20px;
@@ -41,11 +42,11 @@
 }
 
 .signup-form #sp-password {
-    font-size: 10px;
+    font-size: 1em;
 }
 
 .signup-form #sp-confirmpassword {
-    font-size: 10px;
+    font-size: 1em;
 }
 
 #sp-submit {
@@ -54,10 +55,9 @@
     color: white;
     border-top: 30px;
     background-color: #a4c739;
-    width: 302px;
-    border-radius: 0px 0px 5px 5px;
-    position:absolute;
-    transform: translateY(178px) translateX(-30px);
+    width: 100%;
+    border-radius: 5px;
+    position:relative;
 }
 
 meter {
@@ -66,7 +66,7 @@ meter {
     -moz-appearance: none;
         appearance: none;
 
-    margin: 0 auto 1em;
+    margin-bottom: 2.5%;
     width: 100%;
     height: 0.5em;
 
