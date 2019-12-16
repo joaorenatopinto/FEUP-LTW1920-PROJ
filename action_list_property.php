@@ -3,11 +3,11 @@
     session_start();
     
     $user = $_SESSION['username'];
-    $title = $_POST['title'];
-    $description = $_POST['description'];
+    $title = htmlentities(trim($_POST['title']), ENT_NOQUOTES);    //only letters
+    $description = htmlentities(trim($_POST['description']), ENT_NOQUOTES);   //allow links
     $country = $_POST['country'];
-    $location = $_POST['location'];
-    $adress = $_POST['adress'];
+    $location = preg_replace ("/[^a-zA-Z\s]/", '', $_POST['location']);    // letters only
+    $adress = preg_replace ("/[^a-zA-Z0-9\s]/", '', $_POST['adress']); //numbers and letters only
     $bathrooms = $_POST['bathrooms'];
     $bedrooms = $_POST['bedrooms'];
     $kitchens = $_POST['kitchens'];

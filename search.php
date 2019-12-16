@@ -1,5 +1,5 @@
 <?php
-    $location = $_GET['search-location'];
+    $location = preg_replace ("/[^a-zA-Z\s]/", '', $_GET['search-location']);
     $price = $_GET['search-price'];
     $bedrooms = $_GET['search-bedrooms'];
     $bathrooms = $_GET['search-bathrooms'];

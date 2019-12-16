@@ -1,12 +1,13 @@
 <?php
     include_once('database/db_users.php');
 
-    $username = $_POST['username'];
+    $username = preg_replace ("/[^a-zA-Z\s]/", '', $_POST['username']);
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $country = $_POST['country'];
-    $bio = $_POST['bio'];
+    $name = preg_replace ("/[^a-zA-Z\s]/", '',  $_POST['name']);
+    $email = preg_replace ("/[^a-zA-Z\s]/", '', $_POST['email']);
+    $country = preg_replace ("/[^a-zA-Z\s]/", '', $_POST['country']);
+    $bio = htmlentities(trim($_POST['bio']), ENT_NOQUOTES);
+    
     update_user_details($username, $name, $email, $country, $bio);
 
     $password = $_POST['password'];
@@ -20,4 +21,4 @@
     }
 
     header("Location: main_page.php");    
-?>
+?>  

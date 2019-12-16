@@ -105,9 +105,9 @@ if(!isset($_SESSION['username']))
             <input id="lp-livingrooms" type="number" min="0" name="livingrooms" placeholder="No. of livingrooms" required/>
             <div> <input type="radio" name="type" id="flat" value="flat" required> Flat/Apartment </div>
             <div> <input type="radio" name="type" value="house" required> House </div>
-            <input id="lp-price" type="number" name="price" placeholder="Price per day (€)" required/>
+            <input id="lp-price" type="number" name="price" min="0" placeholder="Price per day (€)" required/>
             <br/>
-            <input id="lp-area" type="number" name="area" placeholder="Area of the property" required/>
+            <input id="lp-area" type="number" name="area" min="0" placeholder="Area of the property" required/>
             <br/>
             <input id="lp-startPeriod" type="date" name="startDate" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" required/>
             <br/>

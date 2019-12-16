@@ -25,7 +25,6 @@ function getReservations(property_id) {
             for (x in myObj) {
                 reservations.push([myObj[x].start_date, myObj[x].end_date]);
             }
-            console.log(reservations);
     }
     }; 
     request.open("GET", "get_reservations.php?" + encodeForAjax({id: property_id}), true);
@@ -45,8 +44,6 @@ function getAvailability(property_id) {
             var  myObj = JSON.parse(this.responseText);
             availability_start = new Date(myObj[0].startAvailablePeriod);
             availability_end = new Date (myObj[0].endAvailablePeriod);
-            console.log(availability_start);
-            console.log(availability_end);
         }
     }; 
     request.open("GET", "get_availability.php?" + encodeForAjax({id: property_id}), true);
