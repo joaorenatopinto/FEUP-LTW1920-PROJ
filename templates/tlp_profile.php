@@ -30,17 +30,23 @@
 <?php function draw_owner_card($user) { ?> 
     <div class="owner-card-container">
         <h3> Owner: </h3>
-        <div class="owner-img">
-            <?php
-                echo '<img alt="none" src="images/users/';
-                if(file_exists("images/users/" . $user['username'] . ".png")) echo $user['username'] . '.png">';
-                else if(file_exists("images/users/" . $user['username'] . ".jpg")) echo $user['username'] . '.jpg">';
-                else echo 'default.png">';
-            ?>
-        </div>
+        <a class="profile-link" href="profile.php?username=<?= $user['username'] ?>">
+            <div class="owner-img">
+                
+                <?php
+                    echo '<img alt="none" src="images/users/';
+                    if(file_exists("images/users/" . $user['username'] . ".png")) echo $user['username'] . '.png">';
+                    else if(file_exists("images/users/" . $user['username'] . ".jpg")) echo $user['username'] . '.jpg">';
+                    else echo 'default.png">';
+                ?>
+                
+            </div>
+        </a>
 
         <div class="owner-details">
-            <h4 class="owner-name"> <?= $user['fullname'] ?></h4>
+            <a class="profile-link" href="profile.php?username=<?= $user['username'] ?>">
+                <h4 class="owner-name"> <?= $user['fullname'] ?></h4>
+            </a>
             <p class="owner-country"> Country: <b> <?= $user['country'] ?> </b> </h6>
             <p class="owner-email"> Email: <b> <?= $user['email'] ?> </b> </h6>
             <p class="owner-creation-date"> Member since <?= $user['joindate'] ?> </p>
