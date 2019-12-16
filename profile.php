@@ -7,7 +7,17 @@
     include_once('templates/tlp_profile.php');
     session_start();
 
-    if(isset($_SESSION['username'])) {
+    if(isset($_GET['username']) && $_GET['username']!='') {
+        draw_header();
+        draw_navbar();
+        $user = get_user($_GET['username']);
+        draw_profile_card($user);
+        $properties = get_user_properties($user);
+        foreach($properties as $property) {
+            draw_property($property);
+        }
+    }
+    else if(isset($_SESSION['username']) && $_SESSION['username']!='') {
         draw_header();
         draw_navbar();
         $user = get_user($_SESSION['username']);

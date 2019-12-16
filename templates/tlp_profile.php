@@ -2,32 +2,46 @@
 
 <?php function draw_profile_card($user)
 { ?>
-    <div class="profile-card-container">
-        <?php
-            if($_SESSION['username'] == $user['username']) {
-                //echo '<a href="editprofile.php?username=' . $user['username'] . '"> <button class="edit-profile">Edit Profile</button></a>';
-                //echo '<a href="action_logout.php"><button class="edit-profile">Logout</button></a>';
-            }
-        ?>
-        <div class="profile-card">
-            <div class="profile-img"> 
-                <?php
-                    echo '<img alt="none" src="images/users/';
-                    if(file_exists("images/users/" . $user['username'] . ".png")) echo $user['username'] . '.png">';
-                    else if(file_exists("images/users/" . $user['username'] . ".jpg")) echo $user['username'] . '.jpg">';
-                    else echo 'default.png">';
-                ?>
+    <div class="profile-card">
+        <div class="profile-img"> 
+            <?php
+                echo '<img alt="none" src="images/users/';
+                if(file_exists("images/users/" . $user['username'] . ".png")) echo $user['username'] . '.png">';
+                else if(file_exists("images/users/" . $user['username'] . ".jpg")) echo $user['username'] . '.jpg">';
+                else echo 'default.png">';
+            ?>
+            <div class="profile-options">
+                <button onclick="location.href = 'editprofile.php';">Edit</button></a>
+                <button onclick="location.href = 'action_logout.php';">Log Out</button></a>
             </div>
-            <div class="profile-details">
-                <h4 class="profile-name"> <?= $user['fullname'] ?></h4>
-                <h6 class="profile-placeholder"> Country: </h6>
-                <h5 class="profile-country"><?= $user['country'] ?></h5>
-                <h6 class="profile-placeholder"> Email: </h6>
-                <h5 class="profile-email"> <?= $user['email'] ?> </h5>
-                <h6 class="profile-placeholder"> Bio: </h6>
-                <p class="profile-bio"> <?= $user['bio'] ?> </p>
-                <p class="profile-creation-date"> Member since <?= $user['joindate'] ?> </p>
-            </div>
+        </div>
+        <div class="profile-details">
+            <h4 class="profile-name"> <?= $user['fullname'] ?></h4>
+            <p class="profile-country"> <span>Country:</span> <b><?php if(isset($user['country'])) echo $user['country']; else echo 'Not specified by user.'; ?> </b> </p>
+            <p class="profile-email"> <span>Email:</span> <b><?php if(isset($user['email'])) echo $user['email']; else echo 'Not specified by user.'; ?> </b> </p>
+            <p class="profile-bio"> <span>Bio:</span> <b><?php if(isset($user['bio'])) echo $user['bio']; else echo 'Not specified by user.'; ?> </b> </p>
+            <p class="profile-creation-date"> Member since <?= $user['joindate'] ?> </p>
+        </div>
+    </div>
+<?php } ?>
+
+<?php function draw_owner_card($user) { ?> 
+    <div class="owner-card-container">
+        <h3> Owner: </h3>
+        <div class="owner-img">
+            <?php
+                echo '<img alt="none" src="images/users/';
+                if(file_exists("images/users/" . $user['username'] . ".png")) echo $user['username'] . '.png">';
+                else if(file_exists("images/users/" . $user['username'] . ".jpg")) echo $user['username'] . '.jpg">';
+                else echo 'default.png">';
+            ?>
+        </div>
+
+        <div class="owner-details">
+            <h4 class="owner-name"> <?= $user['fullname'] ?></h4>
+            <p class="owner-country"> Country: <b> <?= $user['country'] ?> </b> </h6>
+            <p class="owner-email"> Email: <b> <?= $user['email'] ?> </b> </h6>
+            <p class="owner-creation-date"> Member since <?= $user['joindate'] ?> </p>
         </div>
     </div>
 <?php } ?>

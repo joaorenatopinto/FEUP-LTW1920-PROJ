@@ -259,3 +259,11 @@
 
     return round($diff / (60 * 60 * 24));
 } ?>
+
+<?php function echo_if_valid($str) {
+    if($str!=null && $str!='') {
+        echo $str;
+        return true;
+    }
+    else return false;
+}
