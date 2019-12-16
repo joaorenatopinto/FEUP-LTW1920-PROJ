@@ -143,3 +143,8 @@ if(!isset($_SESSION['username']))
 <?php function draw_reservations_seperator() { ?> 
     <h6 class="reservations-seperator"> Reservations </h6>
 <?php } ?>
+<?php function draw_delete_button($property_id) { ?> 
+    <div class="property-options">
+                <button onclick="location.href = 'action_delete_property.php?id= <?= $property_id ?>'">Delete</button></a>
+            </div>
+<?php } ?>

@@ -147,4 +147,11 @@
 
     $stmt->fetchAll();
   }
+
+  function delete_property($property_id){
+    global $db;
+    $stmt = $db->prepare('DELETE FROM property
+                          WHERE id = ?');
+    $stmt->execute(array($property_id));
+  }
 ?>
