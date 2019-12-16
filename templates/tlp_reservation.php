@@ -16,6 +16,9 @@
                 <p class="reservation-start"> Start: <?= $reservation['start_date'] ?> </p>
                 <p class="reservation-end"> End: <?= $reservation['end_date'] ?> </p>
             </div>
+            <div class="reservation-options">
+                <button onclick="location.href = 'action_cancel_reservation.php?id= <?=$reservation['id'] ?>'">Cancel</button></a>
+            </div>
         </article>
     </div>
 <?php } ?>
@@ -35,6 +38,7 @@
             ?>
             </a>
         </div>
+        
         <div class="reservation-details2">
             <h4 class="reservation-client2"> Reservation made by <a class="profile-link" href="profile.php?username=<?= $client['username'] ?>"><strong> <?= $client['fullname'] ?> </a> </strong> </h4>
             <h6 class="reservation-pricing2"> <strong> <?= $property['price'] ?> € / day (total: <?= (1+days_between_strdates($reservation['end_date'], $reservation['start_date'])) * $property['price'] ?> €)</strong> </h6>

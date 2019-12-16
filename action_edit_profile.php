@@ -10,8 +10,8 @@
     
     update_user_details($username, $name, $email, $country, $bio);
 
-    $password = $_POST['password'];
-    $confirm_pw = $_POST['confirm-password'];
+    $password = htmlentities($_POST['password']);
+    $confirm_pw = htmlentities($_POST['confirm-password']);
     if(isset($password) && $password!="" && $password==$confirm_pw) {
         update_user_password($username, $password);
     }

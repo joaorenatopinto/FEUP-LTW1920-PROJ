@@ -26,4 +26,11 @@
         $stmt->execute($values);
         return $stmt->fetchAll();
     }
+
+    function delete_reservation($reservation_id) {
+        global $db;
+        $stmt = $db->prepare('DELETE FROM reservations
+                              WHERE id = ?');
+        $stmt->execute(array($reservation_id));
+    }
 ?>

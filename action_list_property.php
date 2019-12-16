@@ -5,18 +5,18 @@
     $user = $_SESSION['username'];
     $title = htmlentities(trim($_POST['title']), ENT_NOQUOTES);    //only letters
     $description = htmlentities(trim($_POST['description']), ENT_NOQUOTES);   //allow links
-    $country = $_POST['country'];
+    $country = htmlentities($_POST['country']);
     $location = preg_replace ("/[^a-zA-Z\s]/", '', $_POST['location']);    // letters only
     $adress = preg_replace ("/[^a-zA-Z0-9\s]/", '', $_POST['adress']); //numbers and letters only
-    $bathrooms = $_POST['bathrooms'];
-    $bedrooms = $_POST['bedrooms'];
-    $kitchens = $_POST['kitchens'];
-    $livingrooms = $_POST['livingrooms'];
-    $type = $_POST['type'];
-    $price = $_POST['price'];
-    $area = $_POST['area'];
-    $start = $_POST['startDate'];
-    $end = $_POST['endDate'];
+    $bathrooms = htmlentities($_POST['bathrooms']);
+    $bedrooms = htmlentities($_POST['bedrooms']);
+    $kitchens = htmlentities($_POST['kitchens']);
+    $livingrooms = htmlentities($_POST['livingrooms']);
+    $type = htmlentities($_POST['type']);
+    $price = htmlentities($_POST['price']);
+    $area = htmlentities($_POST['area']);
+    $start = htmlentities($_POST['startDate']);
+    $end = htmlentities($_POST['endDate']);
 
     print_r($_FILES);
 

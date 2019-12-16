@@ -4,8 +4,8 @@
     session_set_cookie_params(0, '/', 'www.fe.up.pt', true, true);
     session_start();
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = htmlentities($_POST['username']);
+    $password = htmlentities($_POST['password']);
 
     if(check_password($username, $password)) {
         $_SESSION['username'] = $username;

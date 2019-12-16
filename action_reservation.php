@@ -3,8 +3,8 @@
     include_once('database/db_reservations.php');
     session_start();
     $property = get_property_by_id($_POST['property_id']);
-    $startDate = $_POST['reservation-start'];
-    $endDate = $_POST['reservation-end'];
+    $startDate = htmlentities($_POST['reservation-start']);
+    $endDate = htmlentities($_POST['reservation-end']);
     $valid = 1;
 
     if(strtotime($startDate) > strtotime($endDate)) {

@@ -2,9 +2,9 @@
     include_once('database/db_users.php');
     session_start();
 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $name = $_POST['firstname'] . ' ' . $_POST['lastname'];
+    $username = htmlentities($_POST['username']);
+    $password = htmlentities($_POST['password')];
+    $name = htmlentities($_POST['firstname']) . ' ' . htmlentities($_POST['lastname']);
 
     try {
         insert_user($username, $password, $name);
