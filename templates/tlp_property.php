@@ -123,13 +123,18 @@ if(!isset($_SESSION['username']))
 <?php function draw_reservation_ui($property_id, $owner) { ?>
     <div class="reservation-ui-container">
         <div class="reservation-picker">
-            <?php draw_calendar($property_id); ?>
-            <form id="reservation-form" method="post" action="action_reservation.php">
-                <input type="hidden" name="property_id" value="<?= $property_id ?>">
-                <input type="date" id="reservation-start" name="reservation-start" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
-                <input type="date" id="reservation-end" name="reservation-end" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
-                <input type="submit" id="reservation-submit" value="Submit Reservation"/>
-            </form>
+            <?php draw_calendar($property_id);
+            if(isset($_SESSION['username']) && $_SESSION['username']!='') { ?>
+                <form id="reservation-form" method="post" action="action_reservation.php">
+                    <input type="hidden" name="property_id" value="<?= $property_id ?>">
+                    <input type="date" id="reservation-start" name="reservation-start" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
+                    <input type="date" id="reservation-end" name="reservation-end" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
+                    <input type="submit" id="reservation-submit" value="Submit Reservation"/>
+                </form>
+            <?php } 
+            else {
+                echo '<p class="login-warning"> Log In to make a reservation! </p>'; 
+            } ?>
         </div>
         <?php draw_owner_card($owner); ?>
     </div>
