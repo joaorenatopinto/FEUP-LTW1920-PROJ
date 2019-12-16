@@ -23,6 +23,9 @@
     max-width: 40%;
     margin-top: 2%;
     margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-details {
@@ -62,6 +65,34 @@
     grid-column-end: 3;
 }
 
+.profile-options {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.profile-options button {
+    color: white;
+    background-color: #2E8CAE;
+    border: none;
+    border-radius: 3.125em;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-top: 10%;
+    width: 30%;
+}
+
+.profile-options button:hover {
+    background-color: #0B3B49;
+}
+
+.profile-options a {
+    margin: 0px;
+}
+
 .profile-properties-reservations input {
     color: white;
     display: inline-block;
@@ -79,6 +110,5 @@
 }
 
 .profile-properties-reservations input:hover {
-    background-color: #a4c739;
-    color: black;
+    background-color: #0B3B49;
 }
