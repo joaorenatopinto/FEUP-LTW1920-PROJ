@@ -26,15 +26,17 @@
     $client = get_user($reservation['client_id']);?>
     <div class="reservation-card-container2">
         <div class="reservation-usr-image">
+            <a href="profile.php?username=<?= $client['username'] ?>">
         <?php
             echo '<img alt="none" src="images/users/';
             if(file_exists("images/users/" . $reservation['client_id'] . ".png")) echo $reservation['client_id'] . '.png">';
             else if(file_exists("images/users/" . $reservation['client_id'] . ".jpg")) echo $reservation['client_id'] . '.jpg">';
             else echo 'default.png">';
             ?>
+            </a>
         </div>
         <div class="reservation-details2">
-            <h4 class="reservation-client2"> Reservation made by <strong> <?= $client['fullname'] ?> </strong> </h4>
+            <h4 class="reservation-client2"> Reservation made by <a class="profile-link" href="profile.php?username=<?= $client['username'] ?>"><strong> <?= $client['fullname'] ?> </a> </strong> </h4>
             <h6 class="reservation-pricing2"> <strong> <?= $property['price'] ?> € / day (total: <?= (1+days_between_strdates($reservation['end_date'], $reservation['start_date'])) * $property['price'] ?> €)</strong> </h6>
             <p class="reservation-start2"> <strong>Start:</strong> <?= $reservation['start_date'] ?> </p>
             <p class="reservation-end2"> <strong>End:</strong> <?= $reservation['end_date'] ?> </p>

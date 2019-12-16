@@ -142,3 +142,8 @@
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+.profile-link {
+    text-decoration: none;
+    color: black;
+}
