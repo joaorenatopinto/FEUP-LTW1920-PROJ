@@ -113,3 +113,13 @@
 .profile-properties-reservations input:hover {
     background-color: #0B3B49;
 }
+
+.user-properties {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+    color: #0B3B49;
+    font-size: 2em;
+    margin-top: 3.7%;
+    margin-bottom: 2%;
+}

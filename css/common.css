@@ -6,4 +6,5 @@ body {
     grid-template-rows: auto auto auto;
     background-color: #D7D3D3;
     font-family: 'Source Sans Pro', sans-serif;
+    padding-bottom: 50px;
 }   

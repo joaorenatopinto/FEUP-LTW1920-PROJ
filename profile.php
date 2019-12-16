@@ -12,6 +12,7 @@
         draw_navbar();
         $user = get_user($_GET['username']);
         draw_profile_card($user);
+        echo '<h4 class="user-properties"> Properties </h4>';
         $properties = get_user_properties($user);
         foreach($properties as $property) {
             draw_property($property);
