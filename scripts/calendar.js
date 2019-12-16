@@ -155,7 +155,7 @@ function showCalendar(month, year) {
                     let end = new Date(reservations[h][1]);
                    
 
-                    if((currdate >= start && currdate <= end )|| !(currdate >= availability_start && currdate <= availability_end )){
+                    if((currdate >= start && currdate <= end )){
                         cell.className = "date-picker unavailable";
                         break;
                     }
@@ -165,7 +165,11 @@ function showCalendar(month, year) {
                   }
                 if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
                     cell.className = "date-picker selected";
-                }
+                } else if(!(currdate >= availability_start && currdate <= availability_end ))
+                        cell.className = "date-picker unavailable";
+                    else{
+                        cell.className = "date-picker available";
+                    }
                 row.appendChild(cell);
                 date++;
             }
