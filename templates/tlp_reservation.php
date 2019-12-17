@@ -24,16 +24,16 @@
 <?php } ?>
 
 <?php function draw_reservation_card2($reservation, $property) { 
-    include_once('database/db_users.php');
-    include_once('templates/utils.php');
+    include_once('../database/db_users.php');
+    include_once('../templates/utils.php');
     $client = get_user($reservation['client_id']);?>
     <div class="reservation-card-container2">
         <div class="reservation-usr-image">
             <a href="profile.php?username=<?= $client['username'] ?>">
         <?php
-            echo '<img alt="none" src="images/users/';
-            if(file_exists("images/users/" . $reservation['client_id'] . ".png")) echo $reservation['client_id'] . '.png">';
-            else if(file_exists("images/users/" . $reservation['client_id'] . ".jpg")) echo $reservation['client_id'] . '.jpg">';
+            echo '<img alt="none" src="../images/users/';
+            if(file_exists("../images/users/" . $reservation['client_id'] . ".png")) echo $reservation['client_id'] . '.png">';
+            else if(file_exists("../images/users/" . $reservation['client_id'] . ".jpg")) echo $reservation['client_id'] . '.jpg">';
             else echo 'default.png">';
             ?>
             </a>
