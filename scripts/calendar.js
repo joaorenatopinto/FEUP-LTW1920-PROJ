@@ -167,17 +167,12 @@ function showCalendar(month, year) {
                         cell.className = "date-picker available";
                     }
                   }
-               
                 row.appendChild(cell);
                 date++;
             }
-
-
         }
-
         tbl.appendChild(row);
     }
-
 }
 
 function daysInMonth(iMonth, iYear) {
