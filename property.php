@@ -8,6 +8,7 @@
     include_once('templates/tlp_profile.php');
 
     session_start();
+    session_regenerate_id(true);
 
     draw_header();
     draw_navbar();

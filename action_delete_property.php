@@ -8,9 +8,9 @@
         foreach($reservations as $reservation){
             delete_reservation($reservation['id']);
         }
-        //if(file_exists('images/properties/' . $property['id'] . '.png')) {
+        if(file_exists('images/properties/' . $property['id'] . '.png')) {
             unlink('images/properties/' . $property['id'] . '.png');
-       // }
+       }
         delete_property($id);
     }
     header('Location: profile.php');

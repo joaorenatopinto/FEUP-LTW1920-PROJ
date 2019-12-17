@@ -7,6 +7,7 @@
     include_once('templates/tlp_profile.php');
 
     session_start();
+    session_regenerate_id(true);
 
     if(isset($_GET['username']) && $_GET['username']!='') {
         draw_header();

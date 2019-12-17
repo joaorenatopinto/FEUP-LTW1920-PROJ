@@ -1,15 +1,16 @@
 <?php
     include_once('database/db_users.php');
     session_start();
+    session_regenerate_id(true);
 
     if(isset($_SESSION['username'])){
     
-        $username = preg_replace ("/[^a-zA-Z\s]/", '', $_POST['username']);
+        $username =  htmlentities($_POST['username']);
 
-        $name = preg_replace ("/[^a-zA-Z\s]/", '',  $_POST['name']);
-        $email = preg_replace ("/[^a-zA-Z\s]/", '', $_POST['email']);
-        $country = preg_replace ("/[^a-zA-Z\s]/", '', $_POST['country']);
-        $bio = htmlentities(trim($_POST['bio']), ENT_NOQUOTES);
+        $name = htmlentities($_POST['name']);
+        $email = htmlentities($_POST['email']);
+        $country = htmlentities($_POST['country']);
+        $bio = htmlentities(trim($_POST['bio']));
         
         update_user_details($username, $name, $email, $country, $bio);
 
