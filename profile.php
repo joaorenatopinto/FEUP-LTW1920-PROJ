@@ -5,6 +5,7 @@
     include_once('database/db_properties.php');
     include_once('templates/tlp_common.php');
     include_once('templates/tlp_profile.php');
+
     session_start();
 
     if(isset($_GET['username']) && $_GET['username']!='') {

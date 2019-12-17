@@ -1,7 +1,6 @@
 <?php
     include_once('database/db_users.php');
     include_once('templates/tlp_common.php');
-    session_set_cookie_params(0, '/', 'www.fe.up.pt', true, true);
     session_start();
 
     $username = htmlentities($_POST['username']);

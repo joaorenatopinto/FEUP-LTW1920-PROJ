@@ -33,6 +33,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" > var id = "<?= $id ?>"; </script>
+    <script type="text/javascript" > var id = "<?= $id ?>"
+                                        console.log(id); </script>
     <script type="text/javascript" src="scripts/calendar.js">  </script>
 <?php } ?>
