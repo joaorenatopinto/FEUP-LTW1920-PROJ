@@ -6,7 +6,7 @@
         <article class="property-card">
             <div class="property-img">
                 <img alt="none for now" src="../images/properties/<?php
-                    if(file_exists('images/properties/' . $property['id'] . '.png')) {
+                    if(file_exists('../images/properties/' . $property['id'] . '.png')) {
                         echo $property['id'] . '.png">';
                     }
                     else echo $property['id'] . '.jpg">';
@@ -14,8 +14,13 @@
 
             </div>
             <div class="property-details">
-                <h6 class="property-region"> <?= $property['location'] ?> </h6>
-                <h4 class="property-title"> <a href="property.php?id=<?= $property['id'] ?>"> <?= $property['title'] ?> </a> </h4>
+                <div class="region-options-div"> 
+                    <h6 class="property-region"> <?= $property['location'] ?> </h6>
+                    <?php if($property['owner'] == $_SESSION['username'] && !preg_match('/main_page.php$/', $_SERVER['REQUEST_URI'])) { ?>
+                    <button onclick="location.href = '../actions/action_delete_property.php?id= <?= $property['id'] ?>'">Delete</button>
+                    <?php } ?>
+                </div>
+                <h4 class="property-title"> <a href="../pages/property.php?id=<?= $property['id'] ?>"> <?= $property['title'] ?> </a> </h4>
                 <h6 class="property-pricing"> <strong> <?= $property['price'] ?> € / day </strong> </h6>
                 <p class="property-description">
                     <?= $property['description'] ?>
@@ -59,7 +64,7 @@ function draw_all_properties($properties)
 <?php function draw_list_property()
 { session_start();
 if(!isset($_SESSION['username']))
-    header('Location: login.php');
+    header('Location: ../pages/login.php');
      ?>
     <div class="list-property-card">
         <header>
@@ -106,7 +111,7 @@ if(!isset($_SESSION['username']))
         <div class="reservation-picker">
             <?php draw_calendar($property_id);
             if(isset($_SESSION['username']) && $_SESSION['username']!='') { ?>
-                <form id="reservation-form" method="post" action="actions/action_reservation.php">
+                <form id="reservation-form" method="post" action="../actions/action_reservation.php">
                     <input type="hidden" name="property_id" value="<?= $property_id ?>">
                     <input type="date" id="reservation-start" name="reservation-start" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
                     <input type="date" id="reservation-end" name="reservation-end" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
@@ -123,9 +128,4 @@ if(!isset($_SESSION['username']))
 
 <?php function draw_reservations_seperator() { ?> 
     <h6 class="reservations-seperator"> Reservations </h6>
-<?php } ?>
-<?php function draw_delete_button($property_id) { ?> 
-    <div class="property-options">
-                <button onclick="location.href = 'actions/action_delete_property.php?id= <?= $property_id ?>'">Delete</button>
-            </div>
 <?php } ?>

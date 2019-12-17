@@ -5,6 +5,9 @@
     include_once('../templates/tlp_property.php');
     include_once('../templates/tlp_search.php');
 
+    session_start();
+    session_regenerate_id(true);
+
     draw_header();
     draw_navbar();
 
