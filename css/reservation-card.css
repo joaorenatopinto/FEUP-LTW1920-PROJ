@@ -75,6 +75,8 @@
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 5%;
+    padding-right: 5%;
     height: 10em;
     background-color: white;
     border-radius: 4px;
@@ -141,4 +143,29 @@
 .reservation-details2 p {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+/* Cancel buttons */
+.reservation-options {
+    margin-left: auto;
+}
+
+.reservation-options button {
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size: 1em;
+    text-decoration: underline;
+    color: #adadad;
+}
+
+.reservation-options button:hover {
+    color: #616161;
+}
+
+.reservation-card-container2 .reservation-options button {
+    margin-bottom: auto;
 }
