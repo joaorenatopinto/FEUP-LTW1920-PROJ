@@ -55,7 +55,7 @@
 <?php } ?>
 
 <?php function draw_profile_ui($reservations, $reservation_properties, $properties){ ?>
-    <script src="scripts/profile.js"></script>
+    <script src="../scripts/profile.js"></script>
     <div class="profile-properties-reservations">
         <input class="profile-show-properties" type="button" value="Properties" onclick="profile_show_actions(event)">
         <input class="profile-show-reservations" type="button" value="Reservations" onclick="profile_show_actions(event)">
