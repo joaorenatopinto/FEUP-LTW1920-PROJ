@@ -70,7 +70,7 @@ if(!isset($_SESSION['username']))
         <header>
             <h3>List Property</h3>
         </header>
-        <form class="list-property-form" method="post" action="actions/action_list_property.php" enctype="multipart/form-data">
+        <form class="list-property-form" method="post" action="../actions/action_list_property.php" enctype="multipart/form-data">
             <input type="hidden" name="username" value="<?= $_SESSION['username'] ?>">
             <input id="lp-title" type="text" name="title" placeholder="Title for the ad" required/>
             <br/>

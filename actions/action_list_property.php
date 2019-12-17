@@ -25,7 +25,7 @@
 
         if(strtotime($start) < strtotime($end)) {
             $id = insert_property([$title, $user, $description, $country, $location, $adress, $bathrooms, $bedrooms, $kitchens, $livingrooms, $type, $price, $area, $start, $end]);
-            imagepng(imagecreatefromstring(file_get_contents($_FILES['property_image']['tmp_name'])), "images/properties/$id.png");
+            imagepng(imagecreatefromstring(file_get_contents($_FILES['property_image']['tmp_name'])), "../images/properties/$id.png");
             header('Location: ../pages/main_page.php');
         } else header('Location: ../pages/list_property.php');
         
