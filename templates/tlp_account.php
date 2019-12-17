@@ -39,7 +39,7 @@
         <header>
             <h3>Edit Your Profile</h3>
         </header>
-        <form id="edit-form" method="post" action="action_edit_profile.php" enctype="multipart/form-data">
+        <form class="edit-form" method="post" action="action_edit_profile.php" enctype="multipart/form-data">
             <input type="hidden" name="username" value="<?= $user['username'] ?>">
             <input id="edit-name" type="text" name="name" placeholder="Name" value="<?= $user['fullname'] ?>">
             <input id="edit-email" type="text" name="email" placeholder="Email" value="<?= $user['email'] ?>">

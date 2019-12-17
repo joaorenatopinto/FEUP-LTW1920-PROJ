@@ -16,6 +16,7 @@
         <link href="css/reservation.css" rel="stylesheet">
         <link href="css/login.css" rel="stylesheet">
         <link href="css/signup.css" rel="stylesheet">
+        <link href="css/edit.css" rel="stylesheet">
         <link href="css/reservation-ui.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
