@@ -14,7 +14,10 @@
 
             </div>
             <div class="property-details">
-                <h6 class="property-region"> <?= $property['location'] ?> </h6>
+                <div class="region-options-div"> 
+                    <h6 class="property-region"> <?= $property['location'] ?> </h6>
+                    <button onclick="location.href = 'action_delete_property.php?id= <?= $property['id'] ?>'">Delete</button>
+                </div>
                 <h4 class="property-title"> <a href="property.php?id=<?= $property['id'] ?>"> <?= $property['title'] ?> </a> </h4>
                 <h6 class="property-pricing"> <strong> <?= $property['price'] ?> € / day </strong> </h6>
                 <p class="property-description">
@@ -123,9 +126,4 @@ if(!isset($_SESSION['username']))
 
 <?php function draw_reservations_seperator() { ?> 
     <h6 class="reservations-seperator"> Reservations </h6>
-<?php } ?>
-<?php function draw_delete_button($property_id) { ?> 
-    <div class="property-options">
-                <button onclick="location.href = 'action_delete_property.php?id= <?= $property_id ?>'">Delete</button>
-            </div>
 <?php } ?>
