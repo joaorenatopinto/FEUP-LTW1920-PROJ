@@ -16,7 +16,9 @@
             <div class="property-details">
                 <div class="region-options-div"> 
                     <h6 class="property-region"> <?= $property['location'] ?> </h6>
+                    <?php if($property['owner'] == $_SESSION['username'] && !preg_match('/main_page.php$/', $_SERVER['REQUEST_URI'])) { ?>
                     <button onclick="location.href = 'action_delete_property.php?id= <?= $property['id'] ?>'">Delete</button>
+                    <?php } ?>
                 </div>
                 <h4 class="property-title"> <a href="property.php?id=<?= $property['id'] ?>"> <?= $property['title'] ?> </a> </h4>
                 <h6 class="property-pricing"> <strong> <?= $property['price'] ?> € / day </strong> </h6>
