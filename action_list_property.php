@@ -1,6 +1,7 @@
 <?php
     include_once('database/db_properties.php');
     session_start();
+    session_regenerate_id(true);
 
     if(isset($_SESSION['username'])){
 

@@ -1,8 +1,9 @@
 <?php
     include_once('database/db_users.php');
     session_start();
+    session_regenerate_id(true);
 
-    $username = htmlentities($_POST['username']);
+    $username = htmlentities(strtolower($_POST['username']));
     $password = htmlentities($_POST['password']);
     $name = htmlentities($_POST['firstname']) . ' ' . htmlentities($_POST['lastname']);
 

@@ -2,6 +2,7 @@
     include_once('database/db_properties.php');
     include_once('database/db_reservations.php');
     session_start();
+    session_regenerate_id(true);
 
     $property = get_property_by_id($_POST['property_id']);
     $startDate = htmlentities($_POST['reservation-start']);
