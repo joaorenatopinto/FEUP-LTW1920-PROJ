@@ -6,9 +6,8 @@
 
     if(isset($_SESSION['username']) && $_SESSION['username']!='') {
         $user = get_user($_SESSION['username']);
-        draw_edit_header();
-        draw_navbar();
         draw_header();  
+        draw_navbar();
         draw_edit($user);
     }
     else {

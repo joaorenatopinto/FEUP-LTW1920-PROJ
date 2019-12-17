@@ -35,7 +35,7 @@
                 <li><a href="profile.php">Profile</a></li>
             </ul>
         </nav>
-        <a href="list_property.php"><button>List Property</button></a>
+        <button onclick="location.href='list_property.php';" >List Property</button>
     </header>
 <?php } ?>
 

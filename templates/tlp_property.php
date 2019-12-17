@@ -56,25 +56,6 @@ function draw_all_properties($properties)
 }
 ?>
 
-<?php
-function draw_list_property_header()
-{ ?>
-    <!DOCTYPE html>
-    <html lang="en-US">
-
-    <head>
-        <title>Houst.</title>
-        <meta charset="UTF-8">
-        <link href="css/list_property.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-
-    <body>
-<?php } ?>
-
-
 <?php function draw_list_property()
 { session_start();
 if(!isset($_SESSION['username']))
@@ -145,6 +126,6 @@ if(!isset($_SESSION['username']))
 <?php } ?>
 <?php function draw_delete_button($property_id) { ?> 
     <div class="property-options">
-                <button onclick="location.href = 'action_delete_property.php?id= <?= $property_id ?>'">Delete</button></a>
+                <button onclick="location.href = 'action_delete_property.php?id= <?= $property_id ?>'">Delete</button>
             </div>
 <?php } ?>
