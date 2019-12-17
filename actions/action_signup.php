@@ -1,5 +1,5 @@
 <?php
-    include_once('database/db_users.php');
+    include_once('../database/db_users.php');
     session_start();
     session_regenerate_id(true);
 
@@ -11,8 +11,8 @@
         insert_user($username, $password, $name);
         $_SESSION['username'] = $username;
         print($_SESSION['username']);
-        header('Location: profile.php');
+        header('Location: ../pages/profile.php');
     } catch(PDOException $e) {
-        header('Location: signup.php');
+        header('Location: ../pages/signup.php');
     }
 ?>

@@ -3,5 +3,5 @@
     session_regenerate_id(true);
 
     unset($_SESSION['username']);
-    header("Location: main_page.php");
+    header("Location: ../pages/main_page.php");
 ?>

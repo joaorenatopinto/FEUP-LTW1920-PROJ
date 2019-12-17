@@ -1,7 +1,7 @@
 <?php
-    include_once('database/db_users.php');
-    include_once('templates/tlp_common.php');
-    include_once('templates/tlp_account.php');
+    include_once('../database/db_users.php');
+    include_once('../templates/tlp_common.php');
+    include_once('../templates/tlp_account.php');
     session_start();
     session_regenerate_id(true);
 

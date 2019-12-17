@@ -1,11 +1,11 @@
 <?php
-    include_once('templates/tlp_common.php');
-    include_once('database/db_properties.php');
-    include_once('database/db_reservations.php');
-    include_once('database/db_users.php');
-    include_once('templates/tlp_property.php');
-    include_once('templates/tlp_reservation.php');
-    include_once('templates/tlp_profile.php');
+    include_once('../templates/tlp_common.php');
+    include_once('../database/db_properties.php');
+    include_once('../database/db_reservations.php');
+    include_once('../database/db_users.php');
+    include_once('../templates/tlp_property.php');
+    include_once('../templates/tlp_reservation.php');
+    include_once('../templates/tlp_profile.php');
 
     session_start();
     session_regenerate_id(true);

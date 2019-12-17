@@ -1,5 +1,5 @@
 <?php
-    include_once('database/db_users.php');
+    include_once('../database/db_users.php');
     session_start();
     session_regenerate_id(true);
 
@@ -21,8 +21,8 @@
         }
 
         if(isset($_FILES['image']['tmp_name']) && $_FILES['image']['tmp_name']!="") {
-            imagepng(imagecreatefromstring(file_get_contents($_FILES['image']['tmp_name'])), "images/users/$username.png");
+            imagepng(imagecreatefromstring(file_get_contents($_FILES['image']['tmp_name'])), "../images/users/$username.png");
         }
     }
-    header("Location: main_page.php");    
+    header("Location: ../pages/main_page.php");    
 ?>  

@@ -1,6 +1,6 @@
 <?php
-    include_once('database/db_users.php');
-    include_once('templates/tlp_common.php');
+    include_once('../database/db_users.php');
+    include_once('../templates/tlp_common.php');
     session_start();
     session_regenerate_id(true);
 
@@ -9,9 +9,9 @@
 
     if(check_password($username, $password)) {
         $_SESSION['username'] = $username;
-        header('Location: main_page.php');
+        header('Location: ../pages/main_page.php');
     }
     else {
-        header('Location: login.php');
+        header('Location: ../pages/login.php');
     }
 ?>

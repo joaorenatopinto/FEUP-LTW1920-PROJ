@@ -1,4 +1,9 @@
 <?php
+    include_once('../templates/tlp_common.php');
+    include_once('../database/db_properties.php');
+    include_once('../templates/tlp_property.php');
+    include_once('../templates/tlp_search.php');
+   
     $location = preg_replace ("/[^<a-zA-Z0-9></a-zA-Z0-9>\s]/", '', $_GET['search-location']);
     $price = htmlentities($_GET['search-price']);
     $bedrooms = htmlentities($_GET['search-bedrooms']);
@@ -8,11 +13,7 @@
     $type = htmlentities($_GET['search-type']);
     $order = htmlentities($_GET['order']);
 
-    include_once('templates/tlp_common.php');
-    include_once('database/db_properties.php');
-    include_once('templates/tlp_property.php');
-    include_once('templates/tlp_search.php');
-    
+ 
 
     draw_header();
     draw_navbar();

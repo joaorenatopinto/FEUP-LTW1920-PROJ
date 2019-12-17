@@ -1,6 +1,6 @@
 <?php
-    include_once('database/db_properties.php');
-    include_once('database/db_reservations.php');
+    include_once('../database/db_properties.php');
+    include_once('../database/db_reservations.php');
     session_start();
     session_regenerate_id(true);
 
@@ -10,7 +10,7 @@
     $valid = 1;
 
     if(strtotime($startDate) > strtotime($endDate)) {
-        header('Location: property.php?id=' . $_POST['property_id']);
+        header('Location: ../pages/property.php?id=' . $_POST['property_id']);
     }
 
    // print_r(get_property_reservations($_POST['property_id']));
@@ -32,5 +32,5 @@
         if($valid) insert_reservation([$property['owner'], $_SESSION['username'], $_POST['property_id'], $startDate, $endDate]);
     }
     //else print('3');
-    header("Location: main_page.php");
+    header("Location: ../pages/main_page.php");
 ?>

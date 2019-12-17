@@ -1,5 +1,5 @@
 <?php
-    include_once('database/db_properties.php');
+    include_once('../database/db_properties.php');
     session_start();
     session_regenerate_id(true);
 
@@ -26,8 +26,8 @@
         if(strtotime($start) < strtotime($end)) {
             $id = insert_property([$title, $user, $description, $country, $location, $adress, $bathrooms, $bedrooms, $kitchens, $livingrooms, $type, $price, $area, $start, $end]);
             imagepng(imagecreatefromstring(file_get_contents($_FILES['property_image']['tmp_name'])), "images/properties/$id.png");
-            header('Location: main_page.php');
-        } else header('Location: list_property.php');
+            header('Location: ../pages/main_page.php');
+        } else header('Location: ../pages/list_property.php');
         
-    } else header('Location: main_page.php');   
+    } else header('Location: ../pages/main_page.php');   
 ?>

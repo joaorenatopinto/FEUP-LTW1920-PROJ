@@ -5,15 +5,15 @@
     <div class="profile-card">
         <div class="profile-img"> 
             <?php
-                echo '<img alt="none" src="images/users/';
-                if(file_exists("images/users/" . $user['username'] . ".png")) echo $user['username'] . '.png">';
-                else if(file_exists("images/users/" . $user['username'] . ".jpg")) echo $user['username'] . '.jpg">';
+                echo '<img alt="none" src="../images/users/';
+                if(file_exists("../images/users/" . $user['username'] . ".png")) echo $user['username'] . '.png">';
+                else if(file_exists("../images/users/" . $user['username'] . ".jpg")) echo $user['username'] . '.jpg">';
                 else echo 'default.png">';
             ?>
             <?php if($user['username']==$_SESSION['username'] && isset($_SESSION['username'])) { ?>
             <div class="profile-options">
                 <button onclick="location.href = 'editprofile.php';">Edit</button>
-                <button onclick="location.href = 'actions/action_logout.php';">Log Out</button>
+                <button onclick="location.href = '../actions/action_logout.php';">Log Out</button>
             </div>
             <?php } ?>
         </div>
@@ -34,7 +34,7 @@
             <div class="owner-img">
                 
                 <?php
-                    echo '<img alt="none" src="images/users/';
+                    echo '<img alt="none" src="../images/users/';
                     if(file_exists("images/users/" . $user['username'] . ".png")) echo $user['username'] . '.png">';
                     else if(file_exists("images/users/" . $user['username'] . ".jpg")) echo $user['username'] . '.jpg">';
                     else echo 'default.png">';
