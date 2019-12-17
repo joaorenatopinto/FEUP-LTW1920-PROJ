@@ -4,7 +4,7 @@
         <header>
             <h3>Sign Up</h3>
         </header>
-        <form class="signup-form" method="post" action="action_signup.php">
+        <form class="signup-form" method="post" action="actions/action_signup.php">
             <input id="sp-firstname" type="text" name="firstname" placeholder="First Name" required>
             <input id="sp-lastname" type="text" name="lastname" placeholder="Last Name" required>
             <input id="sp-username" type="text" name="username" placeholder="Username" required>
@@ -24,7 +24,7 @@
         <header>
             <h3>Welcome back!</h3>
         </header>
-        <form class="login-form" method="post" action="action_login.php">
+        <form class="login-form" method="post" action="actions/action_login.php">
             <input id="li-username" type="text" name="username" placeholder="Username" required="">
             <input id="li-password" type="password" name="password" placeholder="Password" required="">
             <input id="li-submit" type="submit" value="Log In">
@@ -39,7 +39,7 @@
         <header>
             <h3>Edit Your Profile</h3>
         </header>
-        <form class="edit-form" method="post" action="action_edit_profile.php" enctype="multipart/form-data">
+        <form class="edit-form" method="post" action="actions/action_edit_profile.php" enctype="multipart/form-data">
             <input type="hidden" name="username" value="<?= $user['username'] ?>">
             <input id="edit-name" type="text" name="name" placeholder="Name" value="<?= $user['fullname'] ?>">
             <input id="edit-email" type="text" name="email" placeholder="Email" value="<?= $user['email'] ?>">

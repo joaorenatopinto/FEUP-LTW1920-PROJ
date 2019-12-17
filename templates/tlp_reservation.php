@@ -17,7 +17,7 @@
                 <p class="reservation-end"> End: <?= $reservation['end_date'] ?> </p>
             </div>
             <div class="reservation-options">
-                <button onclick="location.href = 'action_cancel_reservation.php?id= <?=$reservation['id'] ?>'">Cancel</button>
+                <button onclick="location.href = 'actions/action_cancel_reservation.php?id= <?=$reservation['id'] ?>'">Cancel</button>
             </div>
         </article>
     </div>
@@ -45,7 +45,7 @@
             <p class="reservation-end2"> <strong>End:</strong> <?= $reservation['end_date'] ?> </p>
         </div>
         <div class="reservation-options">
-            <button onclick="location.href = 'action_cancel_reservation.php?id= <?=$reservation['id'] ?>'">Cancel</button>
+            <button onclick="location.href = 'actions/action_cancel_reservation.php?id= <?=$reservation['id'] ?>'">Cancel</button>
         </div>
     </div>
 <?php } ?>

@@ -13,7 +13,7 @@
             <?php if($user['username']==$_SESSION['username'] && isset($_SESSION['username'])) { ?>
             <div class="profile-options">
                 <button onclick="location.href = 'editprofile.php';">Edit</button>
-                <button onclick="location.href = 'action_logout.php';">Log Out</button>
+                <button onclick="location.href = 'actions/action_logout.php';">Log Out</button>
             </div>
             <?php } ?>
         </div>
