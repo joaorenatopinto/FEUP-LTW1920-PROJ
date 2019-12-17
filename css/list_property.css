@@ -1,61 +1,66 @@
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-
 .list-property-card {
-    font-family: 'Source Sans Pro', sans-serif;
+    grid-column-start: 2;
+    grid-column-end: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px;
 }
 
-.list-property-card header h3 {
-    text-align: center;
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-#list-property-form {
-    flex-direction: column;
-    justify-content: space-around;
+.list-property-form {
     display: flex;
+    flex-direction: column;
     background-color: white;
     padding: 30px 30px 0px 30px;
+    margin-bottom: 0px;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    height: 900px;
 }
 
-#list-property-form input {
+.list-property-form input {
     border: 0px;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
     padding-bottom: 5px;
     border-bottom: 1px solid #708090;
     font-size: 20px;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-#list-property-form input::placeholder {
+.list-property-form select {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.list-property-form input::placeholder {
     font-size: 20px;
     color: #708090;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-#list-property-form textarea {
-    resize: none;
-}
-
-#lp-submit {
+.list-property-card #lp-submit {
     padding: 10px 0px 10px 0px;
-    border-bottom: 0px !important;
+    margin-bottom: 0px;
+    border-bottom: 0px;
     color: white;
     border-top: 30px;
     background-color: #a4c739;
-    position: relative;
-    width: 116%;
-    transform: translateX(-7%) translateY(12%);
+    width: 119%;
     border-radius: 0px 0px 5px 5px;
+    transform: translateX(-8.1%) translateY(2%);
+    position:relative;
 }
+
+.list-property-form textarea {
+    resize: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.list-property-card header h3 {
+    text-align: center;
+    font-size: 2.2em;
+}
+
+.list-property-form input[type=file] {
+    font-size: 1em;
+}
+

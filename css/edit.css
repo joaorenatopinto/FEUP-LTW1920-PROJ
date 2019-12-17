@@ -60,6 +60,7 @@
 
 .edit-form textarea {
     resize: none;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .edit-form input[type=file] {
