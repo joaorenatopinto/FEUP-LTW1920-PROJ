@@ -68,7 +68,7 @@ if(!isset($_SESSION['username']))
         <header>
             <h3>List Property</h3>
         </header>
-        <form class="list-property-form" method="post" action="action_list_property.php" enctype="multipart/form-data">
+        <form class="list-property-form" method="post" action="actions/action_list_property.php" enctype="multipart/form-data">
             <input type="hidden" name="username" value="<?= $_SESSION['username'] ?>">
             <input id="lp-title" type="text" name="title" placeholder="Title for the ad" required/>
             <br/>
@@ -109,7 +109,7 @@ if(!isset($_SESSION['username']))
         <div class="reservation-picker">
             <?php draw_calendar($property_id);
             if(isset($_SESSION['username']) && $_SESSION['username']!='') { ?>
-                <form id="reservation-form" method="post" action="action_reservation.php">
+                <form id="reservation-form" method="post" action="actions/action_reservation.php">
                     <input type="hidden" name="property_id" value="<?= $property_id ?>">
                     <input type="date" id="reservation-start" name="reservation-start" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
                     <input type="date" id="reservation-end" name="reservation-end" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>"/>
