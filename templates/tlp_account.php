@@ -9,42 +9,14 @@
             <input id="sp-lastname" type="text" name="lastname" placeholder="Last Name" required>
             <input id="sp-username" type="text" name="username" placeholder="Username" required>
             <input id="sp-password" type="password" name="password" placeholder="Password"  onKeyUp="checkStrength()" required>
-            <meter max="4" id="password-strength-meter"></meter>
+            <meter max="4" value="0" id="password-strength-meter"></meter>
             <input id="sp-confirmpassword" type="password" name="confirm-password" placeholder="Confirm Your Password" required>
             <input id="sp-submit" type="submit" value="Sign Up">
         </form>
         <p> Already have an account? Login <a href="login.php"> here! </a> </p>
         <a href="main_page.php"> <p> Or click here to go back ← </p> </a>
     </div>
-    <script type="text/javascript" src="scripts/password.js">  </script>
-<?php } ?>
-
-<?php function draw_signup_header() { ?>
-    <!DOCTYPE html>
-    <html lang="en-US">
-    <head>
-        <title>Houst.</title>
-        <meta charset="UTF-8">
-        <link href="css/common.css" rel="stylesheet">
-        <link href="css/signup.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-<?php } ?>
-
-<?php function draw_login_header() { ?>
-    <!DOCTYPE html>
-    <html lang="en-US">
-    <head>
-        <title>Houst.</title>
-        <meta charset="UTF-8">
-        <link href="css/common.css" rel="stylesheet">
-        <link href="css/login.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
+    <script src="scripts/password.js">  </script>
 <?php } ?>
 
 <?php function draw_login() { ?>
@@ -60,20 +32,6 @@
         <p> Don't have an account? Sign up <a href="signup.php">here! </a> </p>
         <a href="main_page.php"> <p> Or click here to go back ← </p> </a>
     </div>
-<?php } ?>
-
-<?php function draw_edit_header() { ?>
-    <!DOCTYPE html>
-    <html lang="en-US">
-    <head>
-        <title>Houst.</title>
-        <meta charset="UTF-8">
-        <link href="css/common.css" rel="stylesheet">
-        <link href="css/edit.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
 <?php } ?>
 
 <?php function draw_edit($user) { ?>

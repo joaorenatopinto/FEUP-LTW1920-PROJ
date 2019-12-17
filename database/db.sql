@@ -40,22 +40,14 @@ CREATE TABLE reservations (
         ON DELETE CASCADE
 );
 
-CREATE TABLE review (
-    id INTEGER PRIMARY KEY,
-    reservation_id INTEGER REFERENCES reservation,
-    user_id INTEGER REFERENCES users,
-    rating INTEGER,
-    comment VARCHAR
-);
-/*
 INSERT INTO users VALUES(
     'user',
-    '$2y$12$rNprhBIjM0tck6N4Bi2Y0u9kSbrOl.PFXKcoOjxM9c34N3KLSzZse',
-    'Nome do User',
+    'password',
+    'User Exemplo',
     'Portugal',
-    'email_do_user@gmail.com',
-    'Bio do User. Bio do User. Bio do User. Bio do User. Bio do User. Bio do User. Bio do User. Bio do User. Bio do User. Bio do User. Bio do User.',
-    '2019-12-11'
+    'email_do_user@email.com',
+    'Bio do user. Bio do user. Bio do user. Bio do user. Bio do user. Bio do user. Bio do user. Bio do user. Bio do user. Bio do user.',
+    strftime('%Y/%m/%d',date('now'))
 );
 
 INSERT INTO property VALUES(
@@ -64,35 +56,15 @@ INSERT INTO property VALUES(
     'user',
     'Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
     'Portugal',
-    'Vila Real',
+    'Localização da Casa',
     'Rua dos Mortos 123',
     2,
     4,
     1,
     1,
     1,
-    800,
-    249,
-    '2020-01-01',
-    '2020-01-30'
+    300,
+    700,
+    '2020-06-01',
+    '2020-09-01'
 );
-
-INSERT INTO property VALUES(
-    2,
-    'Casa férias do estrondo varanda do estrondo',
-    'user',
-    'Disponível de 01 a 20 de Fev. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. Descrição mais detalhada da casa dada pelo dono. ',
-    'Portugal',
-    'Aveiro',
-    'Rua Venesa 123',
-    2,
-    3,
-    2,
-    1,
-    1,
-    250,
-    194,
-    '2020-02-01',
-    '2020-02-20'
-);
-*/

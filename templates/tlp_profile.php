@@ -12,8 +12,8 @@
             ?>
             <?php if($user['username']==$_SESSION['username'] && isset($_SESSION['username'])) { ?>
             <div class="profile-options">
-                <button onclick="location.href = 'editprofile.php';">Edit</button></a>
-                <button onclick="location.href = 'action_logout.php';">Log Out</button></a>
+                <button onclick="location.href = 'editprofile.php';">Edit</button>
+                <button onclick="location.href = 'action_logout.php';">Log Out</button>
             </div>
             <?php } ?>
         </div>
@@ -47,15 +47,15 @@
             <a class="profile-link" href="profile.php?username=<?= $user['username'] ?>">
                 <h4 class="owner-name"> <?= $user['fullname'] ?></h4>
             </a>
-            <p class="owner-country"> Country: <b> <?= $user['country'] ?> </b> </h6>
-            <p class="owner-email"> Email: <b> <?= $user['email'] ?> </b> </h6>
+            <p class="owner-country"> Country: <b> <?= $user['country'] ?> </b> </p>
+            <p class="owner-email"> Email: <b> <?= $user['email'] ?> </b> </p>
             <p class="owner-creation-date"> Member since <?= $user['joindate'] ?> </p>
         </div>
     </div>
 <?php } ?>
 
 <?php function draw_profile_ui($reservations, $reservation_properties, $properties){ ?>
-    <script type="text/javascript" src="scripts/profile.js"></script>
+    <script src="scripts/profile.js"></script>
     <div class="profile-properties-reservations">
         <input class="profile-show-properties" type="button" value="Properties" onclick="profile_show_actions(event)">
         <input class="profile-show-reservations" type="button" value="Reservations" onclick="profile_show_actions(event)">
