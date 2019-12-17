@@ -11,6 +11,8 @@
         $email = htmlentities($_POST['email']);
         $country = htmlentities($_POST['country']);
         $bio = htmlentities(trim($_POST['bio']));
+
+        print($_POST['bio']);
         
         update_user_details($username, $name, $email, $country, $bio);
 
@@ -24,5 +26,5 @@
             imagepng(imagecreatefromstring(file_get_contents($_FILES['image']['tmp_name'])), "../images/users/$username.png");
         }
     }
-    header("Location: ../pages/main_page.php");    
+    //header("Location: ../pages/main_page.php");    
 ?>  
