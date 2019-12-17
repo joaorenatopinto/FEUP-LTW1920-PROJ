@@ -3,7 +3,7 @@
     session_start();
 
     $username = htmlentities($_POST['username']);
-    $password = htmlentities($_POST['password')];
+    $password = htmlentities($_POST['password']);
     $name = htmlentities($_POST['firstname']) . ' ' . htmlentities($_POST['lastname']);
 
     try {

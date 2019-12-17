@@ -31,7 +31,6 @@
                 </select>
                 <select id="year" onchange="jump()"></select>
             </div>
-
         </div>
     </div>
     <script type="text/javascript" > var id = "<?= $id ?>"; </script>

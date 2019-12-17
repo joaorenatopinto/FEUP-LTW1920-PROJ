@@ -33,7 +33,11 @@ CREATE TABLE reservations (
     client_id INTEGER REFERENCES users,
     property_id INTEGER REFERENCES property,
     start_date TEXT,
-    end_date TEXT
+    end_date TEXT,
+    CONSTRAINT fk_property
+        FOREIGN KEY (property_id)
+        REFERENCES property (id)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE review (
@@ -43,7 +47,7 @@ CREATE TABLE review (
     rating INTEGER,
     comment VARCHAR
 );
-
+/*
 INSERT INTO users VALUES(
     'user',
     '$2y$12$rNprhBIjM0tck6N4Bi2Y0u9kSbrOl.PFXKcoOjxM9c34N3KLSzZse',
@@ -91,3 +95,4 @@ INSERT INTO property VALUES(
     '2020-02-01',
     '2020-02-20'
 );
+*/

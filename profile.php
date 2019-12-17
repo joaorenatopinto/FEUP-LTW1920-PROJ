@@ -10,7 +10,7 @@
     if(isset($_GET['username']) && $_GET['username']!='') {
         draw_header();
         draw_navbar();
-        $user = get_user($_GET['username']);
+        $user = get_user(htmlentities($_GET['username']));
         draw_profile_card($user);
         echo '<h4 class="user-properties"> Properties </h4>';
         $properties = get_user_properties($user);

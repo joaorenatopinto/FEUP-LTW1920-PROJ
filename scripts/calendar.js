@@ -147,12 +147,19 @@ function showCalendar(month, year) {
 
                 var currdate = new Date(year, month, date);
 
+                if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
+                    cell.className = "date-picker selected";
+                } else if(!(currdate >= availability_start && currdate <= availability_end ))
+                    cell.className = "date-picker unavailable";
+                else{
+                    cell.className = "date-picker available";
+                 }
+                console.log(reservations.length);
                 for (h = 0; h < reservations.length; h++) {
                     let start = new Date(reservations[h][0]);
                     let end = new Date(reservations[h][1]);
                    
-
-                    if((currdate >= start && currdate <= end )){
+                    if((currdate >= start && currdate <= end || !(currdate >= availability_start && currdate <= availability_end ))){
                         cell.className = "date-picker unavailable";
                         break;
                     }
@@ -160,13 +167,7 @@ function showCalendar(month, year) {
                         cell.className = "date-picker available";
                     }
                   }
-                if ( date === today.getDate() && year === today.getFullYear() && month === today.getMonth() ) {
-                    cell.className = "date-picker selected";
-                } else if(!(currdate >= availability_start && currdate <= availability_end ))
-                        cell.className = "date-picker unavailable";
-                    else{
-                        cell.className = "date-picker available";
-                    }
+               
                 row.appendChild(cell);
                 date++;
             }
