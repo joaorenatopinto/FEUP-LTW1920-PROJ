@@ -16,7 +16,7 @@
             <div class="property-details">
                 <div class="region-options-div"> 
                     <h6 class="property-region"> <?= $property['location'] ?> </h6>
-                    <?php if($property['owner'] == $_SESSION['username'] && !preg_match('/main_page.php$/', $_SERVER['REQUEST_URI'])) { ?>
+                    <?php if(isset($_SESSION['username']) && $property['owner'] == $_SESSION['username'] && !preg_match('/main_page.php$/', $_SERVER['REQUEST_URI'])) { ?>
                     <button onclick="location.href = '../actions/action_delete_property.php?id= <?= $property['id'] ?>'">Delete</button>
                     <?php } ?>
                 </div>

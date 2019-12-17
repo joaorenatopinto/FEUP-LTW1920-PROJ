@@ -29,7 +29,7 @@
             <input id="li-password" type="password" name="password" placeholder="Password" required="">
             <input id="li-submit" type="submit" value="Log In">
         </form>
-        <p> Don't have an account? Sign up <a href="../page/signup.php">here! </a> </p>
+        <p> Don't have an account? Sign up <a href="../pages/signup.php">here! </a> </p>
         <a href="../pages/main_page.php"> <p> Or click here to go back ← </p> </a>
     </div>
 <?php } ?>
