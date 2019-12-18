@@ -3,7 +3,7 @@
         <article class="reservation-card">
             <div class="reservation-img">
                 <img alt="none for now" src="../images/properties/<?php
-                    if(file_exists('images/properties/' . $property['id'] . '.png')) {
+                    if(file_exists('../images/properties/' . $property['id'] . '.png')) {
                         echo $property['id'] . '.png">';
                     }
                     else echo $property['id'] . '.jpg">';
