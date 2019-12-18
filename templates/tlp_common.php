@@ -33,7 +33,6 @@
 
         <nav>
             <ul class="nav_links">
-                <li><a href="#">Messages</a></li>
                 <li><a href="profile.php">Profile</a></li>
             </ul>
         </nav>

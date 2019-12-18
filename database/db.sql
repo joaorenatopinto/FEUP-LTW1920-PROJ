@@ -20,7 +20,7 @@ CREATE TABLE property (
     nbedrooms INTEGER,
     nkitchens INTEGER,
     nlivingrooms INTEGER,
-    type INTEGER, -- 0: flat/apartment ; 1: house
+    type TEXT, -- 0: flat/apartment ; 1: house
     price INTEGER,
     area INTEGER,
     startAvailablePeriod TEXT,
@@ -62,7 +62,7 @@ INSERT INTO property VALUES(
     4,
     1,
     1,
-    1,
+    'house',
     300,
     700,
     '2020-06-01',

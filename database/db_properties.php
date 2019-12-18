@@ -96,7 +96,7 @@
     }
 
     if($type != 'any') {
-      $query .= " AND property.type = " . $type;
+      $query .= " AND property.type = '" . $type . "'";
     }
 
     switch($order) {
