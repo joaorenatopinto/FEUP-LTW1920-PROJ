@@ -10,7 +10,7 @@
                 else if(file_exists("../images/users/" . $user['username'] . ".jpg")) echo $user['username'] . '.jpg">';
                 else echo 'default.png">';
             ?>
-            <?php if($user['username']==$_SESSION['username'] && isset($_SESSION['username'])) { ?>
+            <?php if(isset($_SESSION['username']) && $user['username']==$_SESSION['username']) { ?>
             <div class="profile-options">
                 <button onclick="location.href = 'editprofile.php';">Edit</button>
                 <button onclick="location.href = '../actions/action_logout.php';">Log Out</button>
