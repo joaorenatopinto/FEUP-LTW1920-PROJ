@@ -13,6 +13,8 @@
   function search_properties($location, $price, $bedrooms, $bathrooms, $start_date, $end_date, $type, $order) {
     global $db;
 
+    print($location);
+
     $query = "SELECT *
               FROM property
               WHERE property.location LIKE ? AND
