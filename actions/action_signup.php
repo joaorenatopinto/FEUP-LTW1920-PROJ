@@ -5,14 +5,16 @@
 
     $username = htmlentities(strtolower($_POST['username']));
     $password = htmlentities($_POST['password']);
+    $confirm_password = htmlentities($_POST['confirm_password']);
+    print($confirm_password);
     $name = htmlentities($_POST['firstname']) . ' ' . htmlentities($_POST['lastname']);
 
-    try {
+    if($password == $confirm_password) {
         insert_user($username, $password, $name);
         $_SESSION['username'] = $username;
         print($_SESSION['username']);
         header('Location: ../pages/profile.php');
-    } catch(PDOException $e) {
+    } else {
         header('Location: ../pages/signup.php');
     }
 ?>
