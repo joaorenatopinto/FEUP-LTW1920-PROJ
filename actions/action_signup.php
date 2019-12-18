@@ -5,7 +5,7 @@
 
     $username = htmlentities(strtolower($_POST['username']));
     $password = htmlentities($_POST['password']);
-    $confirm_password = htmlentities($_POST['confirm_password']);
+    $confirm_password = htmlentities($_POST['confirm-password']);
     print($confirm_password);
     $name = htmlentities($_POST['firstname']) . ' ' . htmlentities($_POST['lastname']);
 
