@@ -10,3 +10,6 @@ Bibliotecas externas:
     - Foi usado um calendário obtido da internet (https://codepen.io/onclick_indo/pen/KLyMdo) que depois foi adaptado de forma
       a obter da base de dados (AJAX) a disponbilidade de cada dia, mudando o estilo do dia em questão de forma a 
       deixar claro a utilizador se está disponível ou não
+
+Script sql:
+    - Correr start_db.sh para iniciar a base de dados.
